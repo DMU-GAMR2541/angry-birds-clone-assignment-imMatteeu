@@ -103,7 +103,7 @@ int main() {
                     b2_ballBody->SetAngularVelocity(0);
 
                     // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    b2_ballBody->ApplyLinearImpulse(b2Vec2(10.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }

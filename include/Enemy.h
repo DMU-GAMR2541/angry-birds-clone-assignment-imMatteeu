@@ -10,7 +10,7 @@ private:
 public:
     //Default constructor for an enemy. 
     Enemy() = default;
-    Enemy(int i_initialHealth) : i_health(i_initialHealth), b_isDestroyed(false) {}
+    Enemy(int i_initialHealth) : i_health(i_initialHealth), b_isDestroyed(false) {} 
 
     //Class functions to be tested.
     void takeDamage(int damage) {

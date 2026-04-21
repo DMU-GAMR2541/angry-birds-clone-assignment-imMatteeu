@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
+#include "Slingshot.h"
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
@@ -9,6 +10,7 @@
 class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
+    std::unique_ptr<Slingshot> Slingshot;
 protected:
     // You can remove any or all of the following functions if their bodies would
     // be empty.
@@ -43,14 +45,20 @@ protected:
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
-    EXPECT_GT(e.getHealth(), 100);
-    SUCCEED() << "Test test passed";
-    FAIL() << "Test didn't pass";
+    // EXPECT_NE(e.getHealth(), 100);
+    EXPECT_EQ(e.getHealth(), 100);
+    //SUCCEED() << "Test test passed";
+    //FAIL() << "Test didn't pass";
 }
 
 TEST_F(EnemyTest, LethalDamagePopsPig) {
     enemy->takeDamage(60);
     EXPECT_TRUE(enemy->checkIfPopped());
+}
+
+TEST(SlingshotTest, tension_Test) {
+    Slingshot s;
+    EXPECT_EQ(s.getTension(), 0);
 }
 
 int main(int argc, char** argv) {
