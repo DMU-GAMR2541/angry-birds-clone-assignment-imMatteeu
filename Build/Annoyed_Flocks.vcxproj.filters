@@ -12,6 +12,18 @@
     <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Bird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DynamicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\StaticObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\CMakeLists.txt" />

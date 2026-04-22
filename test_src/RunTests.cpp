@@ -61,6 +61,19 @@ TEST(SlingshotTest, tension_Test) {
     EXPECT_EQ(s.getTension(), 0);
 }
 
+class ParamTest : public ::testing::TestWithParam<int> {
+protected:
+    ParamTest() = default;
+    ~ParamTest() = default;
+
+    void SetUp() override {}
+    void TearDown() override {}
+};
+
+TEST_P(ParamTest, SimpleTest) {
+    int i_test
+}
+
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
