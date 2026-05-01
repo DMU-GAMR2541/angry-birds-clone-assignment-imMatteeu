@@ -1,11 +1,23 @@
+#include "DynamicObject.h"
 #pragma once
-class Enemy {
+
+enum class EnemySize { Small, Medium, Large };
+
+struct EnemyData {
+	EnemySize size;
+	int health;
+};
+
+class Enemy : DynamicObject {
 /// <summary>
 /// Varaibles that define an enemy.
 /// </summary>
 private:
     int i_health;
     bool b_isDestroyed;
+    EnemySize e_size;
+
+    static EnemyData getEnemyData(EnemyData enemyData) {}
 
 public:
     //Default constructor for an enemy. 

@@ -10,9 +10,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BA642A91-66FE-3978-A8F8-B4E0005E4AC6}</ProjectGuid>
+    <ProjectGuid>{AB3D5FBB-74B9-3368-8C72-B663C444A2C3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>sfml-populate</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -46,13 +46,13 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-mkdir.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -61,21 +61,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-download.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -83,20 +83,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-update.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-src
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -104,19 +104,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-gitupdate.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-update-info.txt;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-gitupdate.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-update-info.txt;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-patch.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -124,24 +124,24 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-patch-info.txt;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-patch-info.txt;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-configure.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-configure.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -149,23 +149,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-build.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-build.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -173,23 +173,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-install.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-install.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -197,23 +197,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\456dc34d79a44093a5844709d4d31482\sfml-populate-test.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\67b387c8d2593c23568a24c2315c3626\sfml-populate-test.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -221,21 +221,21 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\13da0f8d15ba175d17d21b4f7a6ab64a\sfml-populate-complete.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\32f337db55d3a05386a7adf68a13ac59\sfml-populate-complete.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'sfml-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/CMakeFiles/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/CMakeFiles/Debug
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/CMakeFiles/Debug/sfml-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/CMakeFiles/Debug/sfml-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/Debug/sfml-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,14 +243,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\Debug\sfml-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-install;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-mkdir;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-download;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-update;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-patch;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-configure;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-build;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\Debug\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\Debug\sfml-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\b07bc6c0b0c525b1dc10cee8fda80167\sfml-populate.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\014e30f769a615781cb4cfb2ebba8731\sfml-populate.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
@@ -260,18 +260,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\Debug\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\Debug\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -279,18 +279,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\3.30.1\CMakeSystem.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\4.3.2\CMakeSystem.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\CMakeFiles\sfml-populate">
+    <None Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate">
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{1E235FF3-B2A6-3192-A3C8-96EAE82A6C72}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{C23FD36A-DB38-3D87-80AF-A9CB969158C8}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

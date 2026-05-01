@@ -1,315 +1,315 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_broad_phase.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_broad_phase.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_chain_shape.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_chain_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_circle_shape.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_circle_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_collide_circle.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_collide_circle.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_collide_edge.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_collide_edge.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_collide_polygon.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_collide_polygon.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_collision.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_collision.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_distance.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_distance.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_dynamic_tree.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_dynamic_tree.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_edge_shape.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_edge_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_polygon_shape.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_polygon_shape.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\collision\b2_time_of_impact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\collision\b2_time_of_impact.cpp">
       <Filter>src\collision</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_block_allocator.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_block_allocator.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_draw.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_draw.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_math.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_math.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_settings.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_settings.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_stack_allocator.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_stack_allocator.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\common\b2_timer.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\common\b2_timer.cpp">
       <Filter>src\common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_body.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_body.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_contact_manager.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_contact_manager.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_contact_solver.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_distance_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_distance_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_fixture.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_fixture.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_friction_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_friction_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_gear_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_gear_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_island.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_island.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_motor_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_motor_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_mouse_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_mouse_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_polygon_contact.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_prismatic_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_prismatic_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_pulley_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_pulley_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_revolute_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_revolute_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_weld_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_weld_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_wheel_joint.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_wheel_joint.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_world.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_world.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_world_callbacks.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_world_callbacks.cpp">
       <Filter>src\dynamics</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\rope\b2_rope.cpp">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\rope\b2_rope.cpp">
       <Filter>src\rope</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_chain_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_chain_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_circle_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_contact_solver.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_contact_solver.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_edge_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_edge_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_island.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_island.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_polygon_circle_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\dynamics\b2_polygon_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\dynamics\b2_polygon_contact.h">
       <Filter>src\dynamics</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_api.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_api.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_block_allocator.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_block_allocator.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_body.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_body.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_broad_phase.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_broad_phase.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_chain_shape.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_chain_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_circle_shape.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_circle_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_collision.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_collision.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_common.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_common.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_contact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_contact.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_contact_manager.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_contact_manager.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_distance.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_distance.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_distance_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_distance_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_draw.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_draw.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_dynamic_tree.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_dynamic_tree.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_edge_shape.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_edge_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_fixture.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_fixture.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_friction_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_friction_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_gear_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_gear_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_growable_stack.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_growable_stack.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_math.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_math.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_motor_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_motor_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_mouse_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_mouse_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_polygon_shape.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_polygon_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_prismatic_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_prismatic_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_pulley_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_pulley_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_revolute_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_revolute_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_rope.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_rope.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_settings.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_settings.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_shape.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_shape.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_stack_allocator.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_stack_allocator.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_time_of_impact.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_time_of_impact.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_timer.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_timer.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_time_step.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_time_step.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_types.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_types.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_weld_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_weld_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_wheel_joint.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_wheel_joint.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_world.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_world.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\b2_world_callbacks.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\b2_world_callbacks.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\include\box2d\box2d.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\include\box2d\box2d.h">
       <Filter>include\box2d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{A430C978-E655-35E4-93C4-6FAF628CCA55}</UniqueIdentifier>
+      <UniqueIdentifier>{2F7369C1-7403-32FB-8D4E-BD0242A1B950}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\box2d">
-      <UniqueIdentifier>{59A7E686-8CFE-3105-B006-67A48CF40423}</UniqueIdentifier>
+      <UniqueIdentifier>{F1A5153E-2CFA-309D-9241-239217DD763E}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{DEB0BE36-F8CA-34AA-B093-13B85E62173F}</UniqueIdentifier>
+      <UniqueIdentifier>{3A5B680B-F1E5-30D0-BAE3-E3C4A8552CF7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\collision">
-      <UniqueIdentifier>{D006C409-8843-364E-9E50-3384BC514D68}</UniqueIdentifier>
+      <UniqueIdentifier>{D2E909A5-4B96-3CE9-9CD1-60C8383DEB5B}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\common">
-      <UniqueIdentifier>{D38FCEB5-D26E-3572-8161-8396F065A3FF}</UniqueIdentifier>
+      <UniqueIdentifier>{CD4E3380-EE5F-3897-9FBF-020804ADB454}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\dynamics">
-      <UniqueIdentifier>{2DE399E2-7CC7-3939-9E9A-92B02F399D2B}</UniqueIdentifier>
+      <UniqueIdentifier>{0CEC3EDA-8487-3386-8941-D57C7D968A0B}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\rope">
-      <UniqueIdentifier>{931D6121-51AE-385F-BF12-E19639F8B872}</UniqueIdentifier>
+      <UniqueIdentifier>{19837216-E585-3A2F-9724-6EFC33BAF8C3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

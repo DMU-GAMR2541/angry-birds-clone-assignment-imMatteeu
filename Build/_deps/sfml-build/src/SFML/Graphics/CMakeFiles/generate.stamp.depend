@@ -1,3 +1,3 @@
 # CMake generation dependency list for this directory.
-H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/cmake/Modules/FindFreetype.cmake
-H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/src/SFML/Graphics/CMakeLists.txt
+C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-src/cmake/Modules/FindFreetype.cmake
+C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/build/_deps/sfml-src/src/SFML/Graphics/CMakeLists.txt

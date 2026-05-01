@@ -25,9 +25,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8E24E20A-BA09-33B9-A1A5-52638C102415}</ProjectGuid>
+    <ProjectGuid>{4C21FF4C-54F2-355C-B8AE-4AA9C2890847}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>PACKAGE</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -71,9 +71,9 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -89,9 +89,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -107,9 +107,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -125,9 +125,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build
+cd C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
@@ -140,7 +140,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\CMakeFiles\3ccdda620fcce73ae55e6b427a5bd3e2\PACKAGE_force.rule">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\CMakeFiles\a4e3790f00a760c84e70cdd13c1e3834\PACKAGE_force.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
@@ -153,7 +153,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
@@ -168,7 +168,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
@@ -183,7 +183,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
@@ -198,20 +198,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\ZERO_CHECK.vcxproj">
-      <Project>{AA06F1E6-4F46-39AC-B126-74A21DDBEF94}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\ZERO_CHECK.vcxproj">
+      <Project>{1E0A67B4-317E-3323-B520-49A1088232D6}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\ALL_BUILD.vcxproj">
-      <Project>{5E81C5BC-F19A-3EE7-9C98-9A26629038A7}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\sfml-build\ALL_BUILD.vcxproj">
+      <Project>{E03FDA8B-C5F9-3856-AA66-99D0D33732A0}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

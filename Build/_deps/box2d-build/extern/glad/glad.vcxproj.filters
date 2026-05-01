@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\extern\glad\src\gl.c">
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\extern\glad\src\gl.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\extern\glad\include\glad\gl.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\extern\glad\include\glad\gl.h">
       <Filter>include\glad</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\extern\glad\include\KHR\khrplatform.h">
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\extern\glad\include\KHR\khrplatform.h">
       <Filter>include\KHR</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\extern\glad\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\build\_deps\box2d-src\extern\glad\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{A430C978-E655-35E4-93C4-6FAF628CCA55}</UniqueIdentifier>
+      <UniqueIdentifier>{2F7369C1-7403-32FB-8D4E-BD0242A1B950}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\KHR">
-      <UniqueIdentifier>{50F3FB4D-0127-3B16-9C5A-188D75FF2EA6}</UniqueIdentifier>
+      <UniqueIdentifier>{B4E5B419-AC64-3163-9B42-37F7A46F3F2B}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\glad">
-      <UniqueIdentifier>{331BA007-B64E-31A8-BA12-D5F3C759C9FE}</UniqueIdentifier>
+      <UniqueIdentifier>{4DA608F7-D0A3-3181-B8CF-25EE659F152D}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{DEB0BE36-F8CA-34AA-B093-13B85E62173F}</UniqueIdentifier>
+      <UniqueIdentifier>{3A5B680B-F1E5-30D0-BAE3-E3C4A8552CF7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
