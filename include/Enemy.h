@@ -5,6 +5,7 @@ enum class EnemySize { Small, Medium, Large };
 
 struct EnemyData {
 	EnemySize size;
+    int mass;
 	int health;
 };
 

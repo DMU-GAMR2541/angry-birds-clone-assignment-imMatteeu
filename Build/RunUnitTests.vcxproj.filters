@@ -1,39 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\test_src\RunTests.cpp">
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\test_src\RunTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Enemy.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\GameObject.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Slingshot.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\StaticObject.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\StaticObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\CMakeLists.txt" />
+    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{FFCF41D9-2D5F-3695-A1BB-94259EA266D7}</UniqueIdentifier>
+      <UniqueIdentifier>{FB8EFBD7-931D-31DA-A2EF-EE4144B37EB5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{449F00BE-EE79-3C10-B6A4-C5298FD3121F}</UniqueIdentifier>
+      <UniqueIdentifier>{78FD63E9-4FF5-327A-B5C1-60B2350E741C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
