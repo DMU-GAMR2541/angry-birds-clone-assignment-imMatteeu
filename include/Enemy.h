@@ -1,39 +1,33 @@
-#include "DynamicObject.h"
 #pragma once
 
-enum class EnemySize { Small, Medium, Large };
+#include <string>
+#include "DynamicObject.h"
 
-struct EnemyData {
-	EnemySize size;
-	int health;
-};
+enum class EnemySize { Small, Medium, Big };
 
-class Enemy : DynamicObject {
-/// <summary>
-/// Varaibles that define an enemy.
-/// </summary>
-private:
-    int i_health;
-    bool b_isDestroyed;
-    EnemySize e_size;
-
-    static EnemyData getEnemyData(EnemyData enemyData) {}
+class Enemy : public DynamicObject {
 
 public:
-    //Default constructor for an enemy. 
-    Enemy() = default;
-    Enemy(int i_initialHealth) : i_health(i_initialHealth), b_isDestroyed(false) {} 
+    Enemy(b2World& world, EnemySize size);
 
-    //Class functions to be tested.
-    void takeDamage(int damage) {
-        if (damage < 0) return;
-            i_health -= damage;
-        if (i_health <= 0) {
-            i_health = 0;
-            b_isDestroyed = true;
-        }
-    }
+	virtual ~Enemy() = default;
 
-    int getHealth() const { return i_health; }
-    bool checkIfPopped() const { return b_isDestroyed; }
+	void Update() override;
+	void Render(sf::RenderWindow& window) override;
+
+	void takeDamage(int damage);
+	bool toBeDestroyed() const;
+
+	int getHealth() const;
+    EnemySize getSize() const;
+
+private:
+
+    std::string getTexturePath(EnemySize size) const;
+	int getMass(EnemySize size) const;
+	int getScale(EnemySize size) const;
+	int getInitialHealth(EnemySize size) const;
+
+	int i_health;
+	EnemySize e_size;
 };

@@ -25,9 +25,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5E81C5BC-F19A-3EE7-9C98-9A26629038A7}</ProjectGuid>
+    <ProjectGuid>{85983EE5-0D07-3C66-893C-C9AF5270893C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/sfml-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,42 +159,43 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Templates\CPackConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\Config.cmake;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfig.cmake.in;C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-src\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\ZERO_CHECK.vcxproj">
-      <Project>{AA06F1E6-4F46-39AC-B126-74A21DDBEF94}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\ZERO_CHECK.vcxproj">
+      <Project>{FF81CACD-AC15-30C2-9565-E7DE21A32222}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
-      <Project>{EA6EBEE0-8C36-3211-8B29-C44118908BDD}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{71C796DC-A368-35FF-A1E3-A6009903A5C3}</Project>
       <Name>sfml-audio</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
-      <Project>{86F24720-378F-30AD-A487-1622516B5426}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{8D42F662-9F9C-3D73-8853-B6562D015CF9}</Project>
       <Name>sfml-graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
-      <Project>{F02FB68D-2423-3F2A-8CAE-558A7BEC3C8B}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{C05DFE66-AA88-3357-9567-842B0E95E9EB}</Project>
       <Name>sfml-main</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
-      <Project>{E7B5DFF6-0621-3BF1-854F-B661082C0A98}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{B98917F0-A5F4-3D8E-B81E-A3F7503BBF05}</Project>
       <Name>sfml-network</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
-      <Project>{37E6F54D-DE82-36C4-8A1B-F923C61A3EEC}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
+      <Project>{3D2A9E9C-378E-3980-81C1-9BF4691AEA3A}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{CB81E91B-17C2-35B7-9A4B-50969FEDF947}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{1427FC73-AA75-366D-96F6-7D62575B762C}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
   </ItemGroup>

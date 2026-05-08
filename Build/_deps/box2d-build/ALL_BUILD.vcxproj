@@ -25,9 +25,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5E81C5BC-F19A-3EE7-9C98-9A26629038A7}</ProjectGuid>
+    <ProjectGuid>{85983EE5-0D07-3C66-893C-C9AF5270893C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-src\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BH:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu -BC:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build --check-stamp-file C:/Users/Indus/Documents/GitHub/angry-birds-clone-assignment-imMatteeu/Build/_deps/box2d-build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,46 +159,47 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\ZERO_CHECK.vcxproj">
-      <Project>{AA06F1E6-4F46-39AC-B126-74A21DDBEF94}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\ZERO_CHECK.vcxproj">
+      <Project>{FF81CACD-AC15-30C2-9565-E7DE21A32222}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\src\box2d.vcxproj">
-      <Project>{AAD8775D-2AB7-3B2C-A338-9AC2E86387AF}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\src\box2d.vcxproj">
+      <Project>{3E06E2A9-CD14-3925-852E-EA272C7DFFE2}</Project>
       <Name>box2d</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
-      <Project>{ED2726D1-A209-3F4D-ADFF-B8328D7F4C65}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
+      <Project>{F107247F-C040-3A86-AE90-E98DFBE3E79F}</Project>
       <Name>glad</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
-      <Project>{FDEEF71F-774C-303A-8ECA-2F1C1CE301B1}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
+      <Project>{39F8A67A-A63D-3E0E-87B3-B6D649F265ED}</Project>
       <Name>glfw</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
-      <Project>{BA4FF3A1-DFDE-3DFA-B6F0-D736BE910395}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
+      <Project>{E94EB70F-F79A-31B7-8BF4-8D2CC08E3052}</Project>
       <Name>imgui</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
-      <Project>{225CFC52-8CC1-3EE5-A05C-9D7F4D63CA5A}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
+      <Project>{7C3E0EBB-3384-3C9C-AC80-F67092D37B70}</Project>
       <Name>sajson</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\testbed\testbed.vcxproj">
-      <Project>{82C21735-55DA-390B-B1ED-848876F7DAED}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\testbed\testbed.vcxproj">
+      <Project>{2F5A0140-68BB-339A-A001-2B78736DC812}</Project>
       <Name>testbed</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
-      <Project>{839AE6DC-B009-30EC-8E39-24E1E957518E}</Project>
+    <ProjectReference Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
+      <Project>{FA8B3EEE-0BAC-362E-928C-30CF54DA4677}</Project>
       <Name>unit_test</Name>
     </ProjectReference>
   </ItemGroup>
