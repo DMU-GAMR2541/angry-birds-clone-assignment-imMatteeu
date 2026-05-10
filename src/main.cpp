@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
+#include "Enemy.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -87,6 +88,10 @@ int main() {
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
+    Enemy enemy(world, EnemySize::Small, 550, 300);
+    Enemy enemy2(world, EnemySize::Medium, 150, 300);
+    Enemy enemy3(world, EnemySize::Big, 350, 300);
+
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;
@@ -103,7 +108,7 @@ int main() {
                     b2_ballBody->SetAngularVelocity(0);
 
                     // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    b2_ballBody->ApplyLinearImpulse(b2Vec2(10.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    b2_ballBody->ApplyLinearImpulse(b2Vec2(20.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
 
                     std::cout << "Firing!!!!" << std::endl;
                 }
@@ -112,6 +117,11 @@ int main() {
 
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
+
+        enemy.Update();
+        enemy2.Update();
+        enemy3.Update();
+        
 
         //All of the visuals needs to be synced with the physics.
 
@@ -134,7 +144,12 @@ int main() {
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
 
+        enemy.Render(window);
+        enemy2.Render(window);
+        enemy3.Render(window);
+
         window.display();
+
     }
 
     return 0;

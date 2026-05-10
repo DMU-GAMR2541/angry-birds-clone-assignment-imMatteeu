@@ -8,7 +8,7 @@ enum class EnemySize { Small, Medium, Big };
 class Enemy : public DynamicObject {
 
 public:
-    Enemy(b2World& world, EnemySize size);
+    Enemy(b2World& world, EnemySize size, float posX, float posY);
 
 	virtual ~Enemy() = default;
 

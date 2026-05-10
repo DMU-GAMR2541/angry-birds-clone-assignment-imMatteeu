@@ -18,7 +18,7 @@ class DynamicObject : public GameObject {
 
 public:
 
-	DynamicObject(std::string objConstructor, b2World& world, const std::string& texturePath, int sprScale, int objMass);
+	DynamicObject(std::string objConstructor, b2World& world, const std::string& texturePath, int sprScale, int objMass, float posX, float posY);
 
 	~DynamicObject();
 	
@@ -30,7 +30,7 @@ private:
 	int i_mass;
 
 	sf::Sprite objSprite;
-	sf::Sprite objTexture;
+	sf::Texture objTexture;
 
 	std::string textureLoc;
 
