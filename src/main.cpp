@@ -9,6 +9,7 @@
 
 #include "Enemy.h"
 #include "Bird.h"
+#include "Structure.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -80,14 +81,21 @@ int main() {
 
     std::vector<std::unique_ptr<Enemy>> enemies;
     std::vector<std::unique_ptr<Bird>> birds;
+    std::vector<std::unique_ptr<Structure>> structures;
 
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 550, 300));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 850, 300));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 550, 300, ColliderShape::Circle));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300, ColliderShape::Circle));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 1000, 300, ColliderShape::Circle));
 
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200, ColliderShape::Circle));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200, ColliderShape::Circle));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200, ColliderShape::Circle));
+
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Wood, 800, 200, ColliderShape::Rectangle));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 800, 400, ColliderShape::Rectangle));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Ice, 800, 600, ColliderShape::Rectangle));
+
+    
 
     int activeBirdIndex = 0;
 
@@ -155,6 +163,10 @@ int main() {
         {
             bird->Update();
         }
+		for (auto& structure : structures)
+		{
+			structure->Update();
+		}
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
@@ -180,6 +192,11 @@ int main() {
         {
             bird->Render(window);
         }
+
+		for (auto& structure : structures)
+		{
+			structure->Render(window);
+		}
 
         window.display();
 

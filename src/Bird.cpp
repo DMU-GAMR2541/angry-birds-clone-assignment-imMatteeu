@@ -1,14 +1,16 @@
 #include "Bird.h"
 
-Bird::Bird(b2World& world, BirdType type, float posX, float posY)
+Bird::Bird(b2World& world, BirdType type, float posX, float posY, ColliderShape shape)
 	: DynamicObject(
 		"Bird",
 		world,
 		getTexturePath(type),
-		getScale(type),
+		50.0f,
+		50.0f,
 		getMass(type),
 		posX,
-		posY
+		posY,
+		shape
 	),
 	b_type(type),
 	b_ability(getAbility(type))

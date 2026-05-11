@@ -15,12 +15,17 @@ enum class objType
 	UI
 };
 
+enum class ColliderShape
+{
+	Circle,
+	Rectangle
+};
 
 class DynamicObject : public GameObject {
 
 public:
 
-	DynamicObject(std::string objConstructor, b2World& world, const std::string& texturePath, int sprScale, int objMass, float posX, float posY);
+	DynamicObject(std::string objConstructor, b2World& world, const std::string& texturePath, float width, float height, int objMass, float posX, float posY, ColliderShape shape);
 
 	~DynamicObject();
 	
@@ -46,4 +51,5 @@ private:
 	b2Body* b2_Body = nullptr;
 
 	b2CircleShape b2_dynamCircle;
+	b2PolygonShape b2_dynamRect;
 };

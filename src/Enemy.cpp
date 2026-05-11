@@ -1,14 +1,16 @@
 #include "Enemy.h"
 
-Enemy::Enemy(b2World& world, EnemySize size, float posX, float posY)
+Enemy::Enemy(b2World& world, EnemySize size, float posX, float posY, ColliderShape shape)
     : DynamicObject(
         "Enemy",
         world,
         getTexturePath(size),
-        getScale(size),
+        50.0f,
+        50.0f,
         getMass(size),
         posX,
-        posY
+        posY,
+        shape
     ),
     e_size(size),
     i_health(getInitialHealth(size))

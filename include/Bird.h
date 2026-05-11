@@ -9,7 +9,7 @@ enum class BirdAbility { None, Dash, Explode };
 class Bird : public DynamicObject {
 
 public:
-	Bird(b2World& world, BirdType type, float posX, float posY);
+	Bird(b2World& world, BirdType type, float posX, float posY, ColliderShape shape);
 
 	virtual ~Bird() = default;
 

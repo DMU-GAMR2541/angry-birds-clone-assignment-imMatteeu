@@ -9,7 +9,7 @@ enum class StructMaterial { Wood, Stone, Ice };
 class Structure : public DynamicObject {
 
 public:
-	Structure(b2World& world, StructMaterial material, float posX, float posY);
+	Structure(b2World& world, StructMaterial material, float posX, float posY, ColliderShape shape);
 
 	virtual ~Structure() = default;
 

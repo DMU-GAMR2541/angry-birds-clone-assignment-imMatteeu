@@ -9,10 +9,12 @@ DynamicObject::DynamicObject(
     std::string objConstructor,
     b2World& world,
     const std::string& texturePath,
-    int sprScale,
+    float width,
+    float height,
     int objMass,
     float posX,
-    float posY
+    float posY,
+	ColliderShape shape
 )
     : textureLoc(texturePath), i_mass(objMass)
 {
@@ -25,8 +27,8 @@ DynamicObject::DynamicObject(
     objSprite.setTexture(objTexture);
 
     objSprite.setScale(
-        sprScale / objSprite.getLocalBounds().width,
-        sprScale / objSprite.getLocalBounds().height
+        width / objSprite.getLocalBounds().width,
+        height / objSprite.getLocalBounds().height
     );
 
     b2_BodyDef.type = b2_dynamicBody;
@@ -34,9 +36,26 @@ DynamicObject::DynamicObject(
 
     b2_Body = world.CreateBody(&b2_BodyDef);
 
-    b2_dynamCircle.m_radius = (sprScale * 0.5f) / 30.0f;
+    if (shape == ColliderShape::Circle)
+    {
+        b2_dynamCircle.m_radius =
+            (width * 0.5f) / 30.0f;
 
-    b2_FixtureDef.shape = &b2_dynamCircle;
+        b2_FixtureDef.shape = &b2_dynamCircle;
+    }
+    else if (shape == ColliderShape::Rectangle)
+    {
+        float halfWidth =
+            (width * 0.5f) / 30.0f;
+
+        float halfHeight =
+            (height * 0.5f) / 30.0f;
+
+		b2_dynamRect.SetAsBox(halfWidth, halfHeight);
+
+        b2_FixtureDef.shape = &b2_dynamRect;
+    }
+
     b2_FixtureDef.density = static_cast<float>(objMass);
     b2_FixtureDef.friction = 0.3f;
 

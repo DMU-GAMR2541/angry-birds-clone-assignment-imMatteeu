@@ -3,5 +3,5 @@
 
 class StaticObject : public GameObject {
 
-	void Render() override;
+	void Render(sf::RenderWindow& window) override;
 };
