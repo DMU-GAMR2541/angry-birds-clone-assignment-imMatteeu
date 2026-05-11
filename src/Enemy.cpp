@@ -30,8 +30,8 @@ std::string Enemy::getTexturePath(EnemySize size) const
     switch (size)
     {
     case EnemySize::Small: return "assets/Ang_Birds/pig.png";
-    case EnemySize::Medium: return "assets/Ang_Birds/pig.png";
-    case EnemySize::Big: return "assets/Ang_Birds/pig.png";
+    case EnemySize::Medium: return "assets/Ang_Birds/helmetpig.png";
+    case EnemySize::Big: return "assets/Ang_Birds/kingpig.png";
     }
 
     return "";
@@ -53,9 +53,9 @@ int Enemy::getScale(EnemySize size) const
 {
     switch (size)
     {
-    case EnemySize::Small: return 50;
-    case EnemySize::Medium: return 75;
-    case EnemySize::Big: return 100;
+    case EnemySize::Small: return 35;
+    case EnemySize::Medium: return 50;
+    case EnemySize::Big: return 75;
     }
 
     return 50;

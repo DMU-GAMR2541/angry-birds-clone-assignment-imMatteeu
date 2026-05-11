@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
@@ -25,6 +27,8 @@ public:
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;
 	void UpdateSprite();
+
+	b2Body* getBody() { return b2_Body; }
 
 private:
 	int i_mass;

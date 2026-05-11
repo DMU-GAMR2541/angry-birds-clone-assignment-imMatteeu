@@ -4,6 +4,8 @@
 
 enum class BirdType { Red, Yellow, Black };
 
+enum class BirdAbility { None, Dash, Explode };
+
 class Bird : public DynamicObject {
 
 public:
@@ -14,15 +16,18 @@ public:
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;
 
-	void toBeDestroyed() const;
+	bool toBeDestroyed() const;
 
 	BirdType getType() const;
 
+	BirdAbility getAbility(BirdType type) const;
+	void activateAbility();
+
 private:
 	std::string getTexturePath(BirdType type) const;
-	int getMass(BirdType type) const;
+	float getMass(BirdType type) const;
 	int getScale(BirdType type) const;
-	int getAbility(BirdType type) const;
 
-	BirdType b_Type;
+	BirdType b_type;
+	BirdAbility b_ability;
 };

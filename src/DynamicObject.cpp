@@ -84,5 +84,10 @@ void DynamicObject::UpdateSprite()
 
 DynamicObject::~DynamicObject()
 {
+    if (b2_Body)
+    {
+        b2_Body->GetWorld()->DestroyBody(b2_Body);
+        b2_Body = nullptr;
+    }
 }
 

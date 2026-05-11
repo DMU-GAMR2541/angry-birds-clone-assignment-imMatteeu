@@ -1,11 +1,18 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
+
 #include <iostream>
+
+#include <vector>
+#include <memory>
+#include <algorithm>
+
 #include "Enemy.h"
+#include "Bird.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks");
+    sf::RenderWindow window(sf::VideoMode(1200, 800), "Annoyed_Flocks");
     window.setFramerateLimit(60);
 
     //Box2D works in meters. SFML works in pixels.
@@ -13,6 +20,8 @@ int main() {
 
     //Can set a definition for PI.
     const float PI = 3.1415927;
+
+    bool isAbilityPressed = false;
 
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
@@ -22,22 +31,22 @@ int main() {
     //Needs to have a body definition and a body. We use a raw pointer for the b2Body as Box2d does the management itself.
     //A body can be defined as having a position, velocity, and mass. 
     b2BodyDef b2_groundBodyDef;
-    b2_groundBodyDef.position.Set(400.0f / SCALE, 590.0f / SCALE);
+    b2_groundBodyDef.position.Set(600.0f / SCALE, 790.0f / SCALE);
     b2Body* b2_groundBody = world.CreateBody(&b2_groundBodyDef);
 
     //Define a fixture shape that relates to the collision for the ground.
     b2PolygonShape b2_groundBox;
-    b2_groundBox.SetAsBox(400.0f / SCALE, 10.0f / SCALE);
+    b2_groundBox.SetAsBox(600.0f / SCALE, 10.0f / SCALE);
     b2_groundBody->CreateFixture(&b2_groundBox, 0.0f);
 
     //Set up the ground visualisation.
-    sf::RectangleShape sf_groundVisual(sf::Vector2f(800.0f, 20.0f));
-    sf_groundVisual.setOrigin(400.0f, 10.0f);
+    sf::RectangleShape sf_groundVisual(sf::Vector2f(1200.0f, 20.0f));
+    sf_groundVisual.setOrigin(600.0f, 10.0f);
     sf_groundVisual.setFillColor(sf::Color(34, 139, 34)); // Forest Green
 
     //Setting up a wall for the ball to hit.
     b2BodyDef b2_wallDef;
-    b2_wallDef.position.Set(750.0f / SCALE, 500.0f / SCALE);
+    b2_wallDef.position.Set(1150.0f / SCALE, 700.0f / SCALE);
     b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
 
 
@@ -61,7 +70,7 @@ int main() {
 
     b2FixtureDef b2_plankFixture;
     b2_plankFixture.shape = &b2_plankBox;
-    b2_plankFixture.density = 1.5f;   // Light wood
+    b2_plankFixture.density = 1.0f;   // Light wood
     b2_plankFixture.friction = 0.3f;
     b2_plankBody->CreateFixture(&b2_plankFixture);
 
@@ -69,28 +78,18 @@ int main() {
     sf_plankVisual.setOrigin(10.0f, 60.0f);
     sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
 
-    //Create a ball that is fired when space is pressed. We need to first have a dynamic ball to do it.
-    b2BodyDef b2_ballDef;
-    b2_ballDef.type = b2_dynamicBody;
-    b2_ballDef.position.Set(100.0f / SCALE, 500.0f / SCALE);
-    b2Body* b2_ballBody = world.CreateBody(&b2_ballDef);
+    std::vector<std::unique_ptr<Enemy>> enemies;
+    std::vector<std::unique_ptr<Bird>> birds;
 
-    b2CircleShape b2_circleShape;
-    b2_circleShape.m_radius = 15.0f / SCALE;
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 550, 300));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 850, 300));
 
-    b2FixtureDef b2_ballFixture;
-    b2_ballFixture.shape = &b2_circleShape;
-    b2_ballFixture.density = 1.0f;
-    b2_ballFixture.restitution = 0.5f; // Bounciness
-    b2_ballBody->CreateFixture(&b2_ballFixture);
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200));
 
-    sf::CircleShape sf_ballVisual(15.0f);
-    sf_ballVisual.setOrigin(15.0f, 15.0f);
-    sf_ballVisual.setFillColor(sf::Color::Yellow);
-
-    Enemy enemy(world, EnemySize::Small, 550, 300);
-    Enemy enemy2(world, EnemySize::Medium, 150, 300);
-    Enemy enemy3(world, EnemySize::Big, 350, 300);
+    int activeBirdIndex = 0;
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -102,31 +101,60 @@ int main() {
             // INPUT HANDLING: Press SPACE to launch
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Space) {
-                    // Reset position of the ball so that it can be fired again from its original poisition.
-                    b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
-                    b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
-                    b2_ballBody->SetAngularVelocity(0);
+                    
+                    Bird* currentBird;
 
-                    // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    b2_ballBody->ApplyLinearImpulse(b2Vec2(20.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    if (activeBirdIndex < birds.size()) {
+                        currentBird  = birds[activeBirdIndex].get();
 
-                    std::cout << "Firing!!!!" << std::endl;
+
+                        b2Body* body =
+                            currentBird->getBody();
+
+                        // Reset position of the ball so that it can be fired again from its original poisition.
+                        body->SetTransform(b2Vec2(200.0f / SCALE, 450.0f / SCALE), 0);
+                        body->SetLinearVelocity(b2Vec2(0, 0));
+                        body->SetAngularVelocity(0);
+
+                        // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
+                        body->ApplyLinearImpulse(b2Vec2(50.0f, -5.0f), body->GetWorldCenter(), true);
+
+                        std::cout << "Firing" << std::endl;
+                        activeBirdIndex++;
+                    }
+
                 }
+            }
+
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Right) && isAbilityPressed == false)
+            {
+                Bird* currentBird;
+
+                if (activeBirdIndex < birds.size()) {
+                  currentBird = birds[activeBirdIndex].get();
+
+                  currentBird->activateAbility();
+
+                  std::cout << "Ability Activated" << std::endl;
+
+                  isAbilityPressed = true;
+                }
+
             }
         }
 
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
 
-        enemy.Update();
-        enemy2.Update();
-        enemy3.Update();
-        
+        for (auto& enemy : enemies)
+        {
+            enemy->Update();
+        }
 
-        //All of the visuals needs to be synced with the physics.
-
-        sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
-        sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
+        for (auto& bird : birds)
+        {
+            bird->Update();
+        }
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
@@ -142,11 +170,16 @@ int main() {
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
-        window.draw(sf_ballVisual);
 
-        enemy.Render(window);
-        enemy2.Render(window);
-        enemy3.Render(window);
+        for (auto& enemy : enemies)
+        {
+            enemy->Render(window);
+        }
+
+        for (auto& bird : birds)
+        {
+            bird->Render(window);
+        }
 
         window.display();
 
