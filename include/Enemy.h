@@ -8,7 +8,7 @@ enum class EnemySize { Small, Medium, Big };
 class Enemy : public DynamicObject {
 
 public:
-    Enemy(b2World& world, EnemySize size, float posX, float posY, ColliderShape shape);
+    Enemy(b2World& world, EnemySize size, float posX, float posY, float rotationDeg = 0.0f);
 
 	virtual ~Enemy() = default;
 
@@ -23,9 +23,6 @@ public:
 
 private:
 
-    std::string getTexturePath(EnemySize size) const;
-	int getMass(EnemySize size) const;
-	int getScale(EnemySize size) const;
 	int getInitialHealth(EnemySize size) const;
 
 	int i_health;

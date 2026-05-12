@@ -413,11 +413,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Bird.cpp" />
+    <ClCompile Include="..\src\BirdProfiles.cpp" />
     <ClCompile Include="..\src\DynamicObject.cpp" />
+    <ClCompile Include="..\src\EnemyProfiles.cpp" />
     <ClCompile Include="..\src\Structure.cpp" />
+    <ClCompile Include="..\src\StructureProfiles.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp" />
+    <ClInclude Include="..\include\BirdProfiles.h" />
+    <ClInclude Include="..\include\EnemyProfiles.h" />
+    <ClInclude Include="..\include\EntityProfiles.h" />
     <ClInclude Include="..\include\Structure.h" />
+    <ClInclude Include="..\include\StructureProfiles.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Enemy.h" />

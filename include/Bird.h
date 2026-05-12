@@ -9,7 +9,7 @@ enum class BirdAbility { None, Dash, Explode };
 class Bird : public DynamicObject {
 
 public:
-	Bird(b2World& world, BirdType type, float posX, float posY, ColliderShape shape);
+	Bird(b2World& world, BirdType type, float posX, float posY, float rotationDeg = 0.0f);
 
 	virtual ~Bird() = default;
 
@@ -19,15 +19,14 @@ public:
 	bool toBeDestroyed() const;
 
 	BirdType getType() const;
-
 	BirdAbility getAbility(BirdType type) const;
+
 	void activateAbility();
 
 private:
-	std::string getTexturePath(BirdType type) const;
-	float getMass(BirdType type) const;
-	int getScale(BirdType type) const;
 
 	BirdType b_type;
 	BirdAbility b_ability;
+
+	bool b_abilityUsed = false;
 };

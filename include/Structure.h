@@ -9,7 +9,7 @@ enum class StructMaterial { Wood, Stone, Ice };
 class Structure : public DynamicObject {
 
 public:
-	Structure(b2World& world, StructMaterial material, float posX, float posY, ColliderShape shape);
+	Structure(b2World& world, StructMaterial material, float posX, float posY, float rotationDeg);
 
 	virtual ~Structure() = default;
 
@@ -22,9 +22,6 @@ public:
 
 private:
 
-	std::string getTexturePath(StructMaterial material) const;
-	float getMass(StructMaterial material) const;
-	int getScale() const;
 	int getInitialHealth(StructMaterial material) const;
 
 	StructMaterial s_material;

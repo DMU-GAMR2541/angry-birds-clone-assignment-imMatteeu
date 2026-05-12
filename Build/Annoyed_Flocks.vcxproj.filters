@@ -1,43 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\DynamicObject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Bird.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp">
+      <Filter>Source Files\Dynamics</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Structure.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EnemyProfiles.cpp">
+      <Filter>Source Files\Profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StructureProfiles.cpp">
+      <Filter>Source Files\Profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BirdProfiles.cpp">
+      <Filter>Source Files\Profiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\include\EntityProfiles.h">
+      <Filter>Header Files\Profiles</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\GameObject.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\include\EnemyProfiles.h">
+      <Filter>Header Files\Profiles</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Slingshot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\StaticObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Dynamics</Filter>
     </ClInclude>
     <ClInclude Include="..\include\Structure.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Enemy.h">
+      <Filter>Header Files\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h">
+      <Filter>Header Files\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\GameObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\StaticObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BirdProfiles.h">
+      <Filter>Header Files\Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\StructureProfiles.h">
+      <Filter>Header Files\Profiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +70,24 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{72A13A20-599C-370F-B8F8-C0FC925AFDD8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Profiles">
+      <UniqueIdentifier>{4e618abe-5ded-47e9-b6e0-d2d9732bcc59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dynamics">
+      <UniqueIdentifier>{16483ed8-a156-4385-ae59-6d6b81fc0a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{9206f3d8-6a8e-485d-a8f9-afd5c61afdf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{ea5fc1b3-234a-4325-b7d1-9136d2be4996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dynamics">
+      <UniqueIdentifier>{56da2702-4ee0-4276-bc19-1572131f5bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Profiles">
+      <UniqueIdentifier>{c8e398a2-1d95-4e51-bb83-567ab551de40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

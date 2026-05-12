@@ -5,6 +5,7 @@
 #include <box2d/box2d.h>
 
 #include "GameObject.h"
+#include "EntityProfiles.h"
 
 enum class objType 
 {
@@ -25,7 +26,7 @@ class DynamicObject : public GameObject {
 
 public:
 
-	DynamicObject(std::string objConstructor, b2World& world, const std::string& texturePath, float width, float height, int objMass, float posX, float posY, ColliderShape shape);
+	DynamicObject(b2World& world, const EntityData& data, float posX, float posY, float rotationDeg);
 
 	~DynamicObject();
 	

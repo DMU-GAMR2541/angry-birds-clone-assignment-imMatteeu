@@ -59,41 +59,23 @@ int main() {
     sf_wallVisual.setOrigin(10.0f, 80.0f);
     sf_wallVisual.setFillColor(sf::Color::Red);
 
-    //Rather than having an immovable wall, we can use the dynamic body type to create one that can have velocity etc.
-    b2BodyDef b2_plankDef;
-
-    b2_plankDef.type = b2_dynamicBody;
-    b2_plankDef.position.Set(550.0f / SCALE, 450.0f / SCALE);
-    b2Body* b2_plankBody = world.CreateBody(&b2_plankDef);
-
-    b2PolygonShape b2_plankBox;
-    b2_plankBox.SetAsBox(10.0f / SCALE, 60.0f / SCALE);
-
-    b2FixtureDef b2_plankFixture;
-    b2_plankFixture.shape = &b2_plankBox;
-    b2_plankFixture.density = 1.0f;   // Light wood
-    b2_plankFixture.friction = 0.3f;
-    b2_plankBody->CreateFixture(&b2_plankFixture);
-
-    sf::RectangleShape sf_plankVisual(sf::Vector2f(20.0f, 120.0f));
-    sf_plankVisual.setOrigin(10.0f, 60.0f);
-    sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
-
     std::vector<std::unique_ptr<Enemy>> enemies;
     std::vector<std::unique_ptr<Bird>> birds;
     std::vector<std::unique_ptr<Structure>> structures;
 
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 550, 300, ColliderShape::Circle));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300, ColliderShape::Circle));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 1000, 300, ColliderShape::Circle));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 875, 750));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 1000, 300));
 
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200, ColliderShape::Circle));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200, ColliderShape::Circle));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200, ColliderShape::Circle));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200));
 
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Wood, 800, 200, ColliderShape::Rectangle));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 800, 400, ColliderShape::Rectangle));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Ice, 800, 600, ColliderShape::Rectangle));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 850, 750, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 900, 750, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 875, 710, 0));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 500, 400, 0));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Ice, 500, 600, 0));
 
     
 
@@ -120,7 +102,7 @@ int main() {
                             currentBird->getBody();
 
                         // Reset position of the ball so that it can be fired again from its original poisition.
-                        body->SetTransform(b2Vec2(200.0f / SCALE, 450.0f / SCALE), 0);
+                        body->SetTransform(b2Vec2(200.0f / SCALE, 575.0f / SCALE), 0);
                         body->SetLinearVelocity(b2Vec2(0, 0));
                         body->SetAngularVelocity(0);
 
@@ -172,16 +154,12 @@ int main() {
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
         sf_wallVisual.setPosition(b2_wallBody->GetPosition().x * SCALE, b2_wallBody->GetPosition().y * SCALE);
 
-        // Dynamic wall.
-        sf_plankVisual.setPosition(b2_plankBody->GetPosition().x * SCALE, b2_plankBody->GetPosition().y * SCALE);
-        sf_plankVisual.setRotation(b2_plankBody->GetAngle() * (180.0f / PI));
 
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
 
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
-        window.draw(sf_plankVisual);
 
         for (auto& enemy : enemies)
         {

@@ -1,16 +1,13 @@
 #include "Enemy.h"
+#include "EnemyProfiles.h"
 
-Enemy::Enemy(b2World& world, EnemySize size, float posX, float posY, ColliderShape shape)
+Enemy::Enemy(b2World& world, EnemySize size, float posX, float posY, float rotationDeg)
     : DynamicObject(
-        "Enemy",
         world,
-        getTexturePath(size),
-        50.0f,
-        50.0f,
-        getMass(size),
+		getEnemyProfile(size),
         posX,
         posY,
-        shape
+        rotationDeg
     ),
     e_size(size),
     i_health(getInitialHealth(size))
@@ -25,42 +22,6 @@ void Enemy::Update()
 void Enemy::Render(sf::RenderWindow& window)
 {
     DynamicObject::Render(window);
-}
-
-std::string Enemy::getTexturePath(EnemySize size) const
-{
-    switch (size)
-    {
-    case EnemySize::Small: return "assets/Ang_Birds/pig.png";
-    case EnemySize::Medium: return "assets/Ang_Birds/helmetpig.png";
-    case EnemySize::Big: return "assets/Ang_Birds/kingpig.png";
-    }
-
-    return "";
-}
-
-int Enemy::getMass(EnemySize size) const
-{
-    switch (size)
-    {
-    case EnemySize::Small: return 1;
-    case EnemySize::Medium: return 2;
-    case EnemySize::Big: return 4;
-    }
-
-    return 1;
-}
-
-int Enemy::getScale(EnemySize size) const
-{
-    switch (size)
-    {
-    case EnemySize::Small: return 35;
-    case EnemySize::Medium: return 50;
-    case EnemySize::Big: return 75;
-    }
-
-    return 50;
 }
 
 int Enemy::getInitialHealth(EnemySize size) const
