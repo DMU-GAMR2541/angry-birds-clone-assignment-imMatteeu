@@ -19,14 +19,33 @@ public:
 	bool toBeDestroyed() const;
 
 	BirdType getType() const;
-	BirdAbility getAbility(BirdType type) const;
 
 	void activateAbility();
+	bool canUseAbility() const;
+
+	void setFired(bool value);
+	bool hasFired() const;
+
+	void activate();
+	bool isExpired() const;
+	void invalidateBody();
+
+	float lifeTime = 0.0f;
+	float maxLifeTime = 5.0f;
+	bool active = false;
+
+	void setDragging(bool value);
+	bool isDragging() const;
 
 private:
 
 	BirdType b_type;
 	BirdAbility b_ability;
 
+	bool fired = false;
 	bool b_abilityUsed = false;
+
+	bool beingDragged = false;
+
+	BirdAbility getAbility(BirdType type) const;
 };

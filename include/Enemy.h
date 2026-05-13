@@ -16,7 +16,7 @@ public:
 	void Render(sf::RenderWindow& window) override;
 
 	void takeDamage(int damage);
-	bool toBeDestroyed() const;
+	bool isDead() const;
 
 	int getHealth() const;
     EnemySize getSize() const;
@@ -27,4 +27,6 @@ private:
 
 	int i_health;
 	EnemySize e_size;
+
+	bool destroyed = false;
 };

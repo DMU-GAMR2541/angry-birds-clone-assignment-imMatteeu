@@ -421,6 +421,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp" />
     <ClInclude Include="..\include\BirdProfiles.h" />
+    <ClInclude Include="..\include\ContactListener.h" />
+    <ClInclude Include="..\include\Destructibles.h" />
     <ClInclude Include="..\include\EnemyProfiles.h" />
     <ClInclude Include="..\include\EntityProfiles.h" />
     <ClInclude Include="..\include\Structure.h" />

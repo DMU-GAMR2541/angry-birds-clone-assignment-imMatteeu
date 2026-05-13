@@ -71,7 +71,7 @@ protected:
 };
 
 TEST_P(ParamTest, SimpleTest) {
-    int i_test
+    int i_test;
 }
 
 int main(int argc, char** argv) {

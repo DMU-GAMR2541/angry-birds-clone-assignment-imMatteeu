@@ -16,7 +16,9 @@ public:
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;
 
-	bool toBeDestroyed() const;
+
+	void takeDamage(int damage);
+	bool isDestroyed() const;
 
 	StructMaterial getMaterial() const;
 
@@ -26,4 +28,5 @@ private:
 
 	StructMaterial s_material;
 	int i_health;
+	bool b_destroyed = false;
 };

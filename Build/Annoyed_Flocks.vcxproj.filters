@@ -60,6 +60,12 @@
     <ClInclude Include="..\include\StructureProfiles.h">
       <Filter>Header Files\Profiles</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\ContactListener.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Destructibles.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\CMakeLists.txt" />

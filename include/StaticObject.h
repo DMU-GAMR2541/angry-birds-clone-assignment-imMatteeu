@@ -1,7 +1,21 @@
 #pragma once
+#include <string>
 #include "GameObject.h"
 
 class StaticObject : public GameObject {
 
-	void Render(sf::RenderWindow& window) override;
+public:
+
+	StaticObject(const std::string& texturePath, float posX, float posY, float width, float height, float rotationDeg = 0.0f);
+
+	virtual ~StaticObject() = default;
+
+	virtual void Update() override;
+	virtual void Render(sf::RenderWindow& window) override;
+
+protected:
+	sf::Texture objTexture;
+	sf::Sprite objSpritel;
+
+	std::string textureLoc;
 };

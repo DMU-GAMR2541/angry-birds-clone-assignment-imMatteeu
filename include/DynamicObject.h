@@ -33,8 +33,13 @@ public:
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;
 	void UpdateSprite();
+	void clearBody();
 
 	b2Body* getBody() { return b2_Body; }
+
+protected:
+
+b2Body* b2_Body = nullptr;
 
 private:
 	int i_mass;
@@ -48,8 +53,6 @@ private:
 
 	b2BodyDef b2_BodyDef;
 	b2FixtureDef b2_FixtureDef;
-
-	b2Body* b2_Body = nullptr;
 
 	b2CircleShape b2_dynamCircle;
 	b2PolygonShape b2_dynamRect;

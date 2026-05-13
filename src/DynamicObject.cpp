@@ -33,6 +33,10 @@ DynamicObject::DynamicObject(
 
     b2_Body = world.CreateBody(&b2_BodyDef);
 
+    b2_Body->GetUserData().pointer =
+        reinterpret_cast<uintptr_t>(this);
+
+
     if (data.isCircle)
     {
         b2_dynamCircle.m_radius =
@@ -107,5 +111,10 @@ DynamicObject::~DynamicObject()
         b2_Body->GetWorld()->DestroyBody(b2_Body);
         b2_Body = nullptr;
     }
+}
+
+void clearBody()
+{
+    b2Body* b2_Body = nullptr;
 }
 

@@ -10,6 +10,7 @@
 #include "Enemy.h"
 #include "Bird.h"
 #include "Structure.h"
+#include "ContactListener.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -27,6 +28,9 @@ int main() {
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
     b2World world(b2_gravity);
+
+    ContactListener contactListener;
+    world.SetContactListener(&contactListener);
 
     //Setup ground for the circle to move / bounce on.
     //Needs to have a body definition and a body. We use a raw pointer for the b2Body as Box2d does the management itself.
@@ -47,16 +51,16 @@ int main() {
 
     //Setting up a wall for the ball to hit.
     b2BodyDef b2_wallDef;
-    b2_wallDef.position.Set(1150.0f / SCALE, 700.0f / SCALE);
+    b2_wallDef.position.Set(1200.0f / SCALE, 400.0f / SCALE);
     b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
 
 
     b2PolygonShape b2_wallBox;
-    b2_wallBox.SetAsBox(10.0f / SCALE, 80.0f / SCALE);
+    b2_wallBox.SetAsBox(10.0f / SCALE, 800.0f / SCALE);
     b2_wallBody->CreateFixture(&b2_wallBox, 0.0f);
 
-    sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 160.0f));
-    sf_wallVisual.setOrigin(10.0f, 80.0f);
+    sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 800.0f));
+    sf_wallVisual.setOrigin(10.0f, 400.0f);
     sf_wallVisual.setFillColor(sf::Color::Red);
 
     std::vector<std::unique_ptr<Enemy>> enemies;
@@ -65,21 +69,50 @@ int main() {
 
     enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 875, 750));
     enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 1000, 300));
+    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 897, 540));
 
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 200));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 200, 200));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 200));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 750));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 100, 750));
+    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 750));
 
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 850, 750, 90));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 900, 750, 90));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 875, 710, 0));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 500, 400, 0));
-	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Ice, 500, 600, 0));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 845, 750, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 895, 750, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 950, 750, 90));	
+    
+    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 845, 680, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 895, 680, 90));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 950, 680, 90));
+
+    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 867, 610, 90));
+    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 927, 610, 90));
+    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 897, 570, 0));
+
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 867, 710, 0));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 927, 710, 0));	
+    
+    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 867, 640, 0));
+	structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 927, 640, 0));
 
     
 
     int activeBirdIndex = 0;
+
+    bool birdInFlight = false;
+    bool isDragging = false;
+
+    sf::Vector2 slingshotOrigin(200.f, 600.f);
+
+    float maxDragDistX = 75.f;
+    float maxDragDistY = 75.f;
+
+    float launchStr = 0.6f;
+
+    Bird* tempBird;
+    tempBird = birds[0].get();
+    b2Body* tempBody = tempBird->getBody();
+    
+    tempBody->SetTransform(b2Vec2(200.0f / SCALE, 600.0f / SCALE), 0);
+    tempBody->SetType(b2_kinematicBody);
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -88,35 +121,49 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            // INPUT HANDLING: Press SPACE to launch
-            if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Space) {
-                    
-                    Bird* currentBird;
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    std::cout << "Left MB Pressed\n";
+                    if (activeBirdIndex < birds.size() && !birdInFlight)
+                    {
+                        Bird* currentBird = birds.front().get();
 
-                    if (activeBirdIndex < birds.size()) {
-                        currentBird  = birds[activeBirdIndex].get();
-
-
-                        b2Body* body =
-                            currentBird->getBody();
-
-                        // Reset position of the ball so that it can be fired again from its original poisition.
-                        body->SetTransform(b2Vec2(200.0f / SCALE, 575.0f / SCALE), 0);
-                        body->SetLinearVelocity(b2Vec2(0, 0));
-                        body->SetAngularVelocity(0);
-
-                        // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                        body->ApplyLinearImpulse(b2Vec2(50.0f, -5.0f), body->GetWorldCenter(), true);
-
-                        std::cout << "Firing" << std::endl;
-                        activeBirdIndex++;
+                        isDragging = true;
+                        currentBird->setDragging(true);
                     }
-
                 }
             }
 
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Right) && isAbilityPressed == false)
+            if (event.type == sf::Event::MouseButtonReleased) {
+                if (event.mouseButton.button == sf::Mouse::Left) {
+                    std::cout << "Left MB Released\n";
+                    if (activeBirdIndex < birds.size() && !birdInFlight) {
+                        
+                        Bird* currentBird = birds[activeBirdIndex].get();
+
+                        b2Body* body = currentBird->getBody();
+
+                        sf::Vector2f birdPos(body->GetPosition().x * SCALE, body->GetPosition().y * SCALE);
+
+                        sf::Vector2f launchVec = slingshotOrigin - birdPos;
+
+                        body->SetType(b2_dynamicBody);
+
+                        body->ApplyLinearImpulseToCenter(b2Vec2(launchVec.x * launchStr, launchVec.y * launchStr), true);
+
+                        currentBird->setDragging(false);
+                        isDragging = false;
+                        birdInFlight = true;
+
+                        currentBird->setFired(true);
+                        currentBird->activate();
+                    }
+                }
+            }
+
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Right) && isAbilityPressed == false && birdInFlight)
             {
                 Bird* currentBird;
 
@@ -131,6 +178,58 @@ int main() {
                 }
 
             }
+        }
+        if (activeBirdIndex < birds.size())
+        {
+            Bird* currentBird = birds[activeBirdIndex].get();
+
+            if (birdInFlight && currentBird->isExpired())
+            {
+                birdInFlight = false;
+                isAbilityPressed = false;
+
+
+                activeBirdIndex++;
+
+                if (activeBirdIndex < birds.size())
+                {
+                    Bird* nextBird = birds[activeBirdIndex].get();
+                    b2Body* body = nextBird->getBody();
+
+                    body->SetType(b2_kinematicBody);
+                    body->SetTransform(
+                        b2Vec2(200.0f / SCALE, 600.0f / SCALE),
+                        0
+                    );
+
+                    body->SetLinearVelocity(b2Vec2(0, 0));
+                    body->SetAngularVelocity(0);
+                    body->SetAwake(true);
+                }
+            }
+        }
+
+        if (isDragging && activeBirdIndex < birds.size())
+        {
+            b2Body* body = birds[activeBirdIndex].get()->getBody();
+
+            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+
+            sf::Vector2f mouseWorld(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y));
+
+            sf::Vector2f dragVector = mouseWorld - slingshotOrigin;
+
+            float sq_dragVecX = dragVector.x * dragVector.x;
+            float sq_dragVecY = dragVector.y * dragVector.y;
+
+            float length = std::sqrt(sq_dragVecX * sq_dragVecY);
+
+            dragVector.x = std::clamp(dragVector.x, -maxDragDistX, maxDragDistX);
+            dragVector.y = std::clamp(dragVector.y, -maxDragDistY, maxDragDistY);
+
+            sf::Vector2f newPosition = slingshotOrigin + dragVector;
+
+            body->SetTransform(b2Vec2(newPosition.x / SCALE, newPosition.y / SCALE), 0);
         }
 
         // Update Physics
@@ -176,9 +275,29 @@ int main() {
 			structure->Render(window);
 		}
 
+        if (isDragging && activeBirdIndex < birds.size())
+        {
+            b2Body* body = birds[activeBirdIndex].get()->getBody();
+
+            sf::Vector2f birdPos(
+                body->GetPosition().x * SCALE,
+                body->GetPosition().y * SCALE
+            );
+
+            sf::Vertex slingLine[] =
+            {
+                sf::Vertex(slingshotOrigin, sf::Color::Black),
+                sf::Vertex(birdPos, sf::Color::Black)
+            };
+
+            window.draw(slingLine, 2, sf::Lines);
+        }
+
         window.display();
 
     }
+
+
 
     return 0;
 }

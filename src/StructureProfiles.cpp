@@ -16,9 +16,9 @@ static EntityData StoneStructure = {
 	"assets/Ang_Birds/stonewall.png",
 	60.0f,
 	10.0f,
-	3.0f,
+	12.0f,
 	0.5f,
-	0.3f,
+	0.1f,
 	false
 };
 
