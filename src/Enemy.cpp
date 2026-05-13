@@ -30,8 +30,23 @@ int Enemy::getInitialHealth(EnemySize size) const
     {
     case EnemySize::Small: return 50;
     case EnemySize::Medium: return 100;
-    case EnemySize::Big: return 200;
+    case EnemySize::Big: return 150;
     }
 
     return 50;
+}
+
+void Enemy::takeDamage(int damage)
+{
+    i_health -= damage;
+
+    if (i_health < 0.0f)
+        i_health = 0.0f;
+
+    std::cout << "Enemy HP: " << i_health << "\n";
+}
+
+bool Enemy::isDead() const
+{
+    return i_health <= 0.0f;
 }

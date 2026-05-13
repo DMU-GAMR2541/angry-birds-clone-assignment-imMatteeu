@@ -37,6 +37,11 @@ public:
 
 	b2Body* getBody() { return b2_Body; }
 
+	void invalidateBody()
+	{
+		b2_Body = nullptr;
+	}
+
 protected:
 
 b2Body* b2_Body = nullptr;

@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "DynamicObject.h"
+#include <box2d/box2d.h>
 
 enum class BirdType { Red, Yellow, Black };
 
@@ -36,6 +37,9 @@ public:
 
 	void setDragging(bool value);
 	bool isDragging() const;
+
+	b2Fixture* explosionFixture = nullptr;
+	float explosionTimer = 0.0f;
 
 private:
 

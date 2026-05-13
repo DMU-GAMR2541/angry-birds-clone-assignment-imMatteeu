@@ -30,8 +30,23 @@ int Structure::getInitialHealth(StructMaterial material) const
 	switch (material)
 	{
 	case StructMaterial::Wood: return 100;
-	case StructMaterial::Stone: return 200;
+	case StructMaterial::Stone: return 150;
 	case StructMaterial::Ice: return 50;
 	}
 	return 100;
+}
+
+void Structure::takeDamage(int damage)
+{
+	i_health -= damage;
+
+	if (i_health < 0.0f)
+		i_health = 0.0f;
+
+	std::cout << "Structure HP: " << i_health << "\n";
+}
+
+bool Structure::isDestroyed() const
+{
+    return i_health <= 0.0f;
 }
