@@ -9,6 +9,7 @@
 #include "Bird.h"
 #include "Structure.h"
 #include "ContactListener.h"
+#include "Slingshot.h"
 
 int main() 
 {
@@ -21,6 +22,7 @@ int main()
     bool isAbilityPressed = false;
     bool birdInFlight = false;
     bool isDragging = false;
+
 
     b2Vec2 b2_gravity(0.0f, 9.8f);
     b2World world(b2_gravity);
@@ -54,9 +56,21 @@ int main()
     sf_wallVisual.setOrigin(10.0f, 400.0f);
     sf_wallVisual.setFillColor(sf::Color::Red);
 
+	// Vectors to hold game objects
+
     std::vector<std::unique_ptr<Enemy>> enemies;
     std::vector<std::unique_ptr<Bird>> birds;
     std::vector<std::unique_ptr<Structure>> structures;
+    std::vector<std::unique_ptr<Slingshot>> slingshots;
+
+	// GAME OBJECT CREATION
+
+
+	// Static Slingshot Creation
+
+    slingshots.push_back(std::make_unique<Slingshot>("assets/Ang_Birds/slingshot.png", 150.f, 750.f));
+
+	// Enemies, Birds, and Structures Creation
 
     enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 830, 660));
     enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
@@ -78,12 +92,18 @@ int main()
     structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 865, 750, 90));
     structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 840, 695, 0));
 
+	// Set starting position of the first bird on the slingshot
+
     sf::Vector2 slingshotOrigin(200.f, 600.f);
 
+	// Max drag distance for the slingshot (for visual feedback and to limit launch strength)
+    
     float maxDragDistX = 75.f;
     float maxDragDistY = 75.f;
 
     float launchStr = 0.6f;
+
+    // Sets first bird in the vector to kinematic and places it at the set slingshot origin points.
 
     if (!birds.empty())
     {
@@ -93,6 +113,8 @@ int main()
         body->SetType(b2_kinematicBody);
     }
 
+	// Main Game Loop
+
     while (window.isOpen()) 
     {
         sf::Event event;
@@ -101,6 +123,8 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+			// Handle Mouse Input for Slingshot Dragging and Launching
 
             if ((event.type == sf::Event::MouseButtonPressed) && (event.mouseButton.button == sf::Mouse::Left))
             {
@@ -113,11 +137,15 @@ int main()
                 
             }
 
+			// Handle Mouse Release for Launching the Bird
+
             if ((event.type == sf::Event::MouseButtonReleased) && (event.mouseButton.button == sf::Mouse::Left)) 
             {
                 std::cout << "Left MB Released\n";
 
                 if (!birds.empty() && !birdInFlight) {
+
+					// Calculate launch vector based on drag distance and direction, then apply impulse to the bird's body
 
                     Bird* bird = birds.front().get();
                     b2Body* body = bird->getBody();
@@ -125,10 +153,14 @@ int main()
                     sf::Vector2f birdPos(body->GetPosition().x * SCALE, body->GetPosition().y * SCALE);
 
                     sf::Vector2f launchVec = slingshotOrigin - birdPos;
+                    
+					// Set back to dynamic to be affected by physics and apply impulse based on drag distance
 
                     body->SetType(b2_dynamicBody);
 
                     body->ApplyLinearImpulseToCenter(b2Vec2(launchVec.x * launchStr, launchVec.y * launchStr), true);
+
+					// Reset dragging state and mark bird as in flight
 
                     bird->setDragging(false);
                     isDragging = false;
@@ -304,6 +336,11 @@ int main()
 
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
+
+        for (auto& slingshot : slingshots)
+        {
+            slingshot->Render(window);
+        }
 
         for (auto& enemy : enemies)
         {

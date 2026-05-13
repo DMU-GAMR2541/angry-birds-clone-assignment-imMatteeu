@@ -25,6 +25,12 @@
     <ClCompile Include="..\src\BirdProfiles.cpp">
       <Filter>Source Files\Profiles</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Slingshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StaticObject.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\EntityProfiles.h">

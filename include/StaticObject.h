@@ -15,7 +15,7 @@ public:
 
 protected:
 	sf::Texture objTexture;
-	sf::Sprite objSpritel;
+	sf::Sprite objSprite;
 
 	std::string textureLoc;
 };

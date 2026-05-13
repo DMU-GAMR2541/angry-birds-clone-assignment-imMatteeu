@@ -416,6 +416,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\src\BirdProfiles.cpp" />
     <ClCompile Include="..\src\DynamicObject.cpp" />
     <ClCompile Include="..\src\EnemyProfiles.cpp" />
+    <ClCompile Include="..\src\Slingshot.cpp" />
+    <ClCompile Include="..\src\StaticObject.cpp" />
     <ClCompile Include="..\src\Structure.cpp" />
     <ClCompile Include="..\src\StructureProfiles.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp" />
