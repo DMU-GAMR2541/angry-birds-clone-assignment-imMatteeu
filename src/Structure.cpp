@@ -3,13 +3,14 @@
 #include "Structure.h"
 #include "StructureProfiles.h"
 
-Structure::Structure(b2World& world, StructMaterial material, float posX, float posY, float rotationDeg)
+Structure::Structure(b2World* world, StructMaterial material, float posX, float posY, float rotationDeg, bool physicsEnabled)
 	: DynamicObject(
 		world,
 		getStructureProfile(material),
 		posX,
 		posY,
-		rotationDeg
+		rotationDeg,
+		physicsEnabled
 	),
 	s_material(material),
 	i_health(getInitialHealth(material))

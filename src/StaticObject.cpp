@@ -6,7 +6,9 @@ StaticObject::StaticObject(const std::string& texturePath,
     float posY,
     float width,
     float height,
-    float rotationDeg)
+    float rotationDeg,
+    float worldScale
+    )
     : textureLoc(texturePath)
 {
     if (!objTexture.loadFromFile(texturePath))
@@ -17,7 +19,7 @@ StaticObject::StaticObject(const std::string& texturePath,
 
     objSprite.setTexture(objTexture);
 
-    objSprite.setScale(0.8, 0.8);
+    objSprite.setScale(worldScale, worldScale);
 
 
 

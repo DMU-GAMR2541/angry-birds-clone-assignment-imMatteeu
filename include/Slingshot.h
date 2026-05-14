@@ -4,5 +4,5 @@
 class Slingshot : public StaticObject
 {
 public:
-    Slingshot(const std::string& texturePath, float posX, float posY);
+    Slingshot(const std::string& texturePath, float posX, float posY, float worldScale);
 };

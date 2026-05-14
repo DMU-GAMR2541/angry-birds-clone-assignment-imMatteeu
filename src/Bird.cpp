@@ -3,8 +3,8 @@
 #include "Structure.h"
 #include "BirdProfiles.h"
 
-Bird::Bird(b2World& world, BirdType type, float posX, float posY, float rotationDeg)
-	: DynamicObject(world, getBirdProfile(type), posX, posY, rotationDeg), b_type(type), b_ability(getAbility(type))
+Bird::Bird(b2World* world, BirdType type, float posX, float posY, float rotationDeg, bool physicsEnabled)
+	: DynamicObject(world, getBirdProfile(type), posX, posY, rotationDeg, physicsEnabled), b_type(type), b_ability(getAbility(type))
 {}
 
 void Bird::Update()

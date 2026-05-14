@@ -10,6 +10,7 @@
 #include "Structure.h"
 #include "ContactListener.h"
 #include "Slingshot.h"
+#include "UIElement.h"
 
 int main() 
 {
@@ -26,6 +27,11 @@ int main()
 
     b2Vec2 b2_gravity(0.0f, 9.8f);
     b2World world(b2_gravity);
+
+    sf::Font font;
+    font.loadFromFile("../assets/fonts/angry-birds.ttf");
+
+    UIElement ui("../assets/Ang_Birds/loading.jpg", font);
 
     ContactListener contactListener;
     world.SetContactListener(&contactListener);
@@ -63,34 +69,31 @@ int main()
     std::vector<std::unique_ptr<Structure>> structures;
     std::vector<std::unique_ptr<Slingshot>> slingshots;
 
-	// GAME OBJECT CREATION
-
-
 	// Static Slingshot Creation
 
-    slingshots.push_back(std::make_unique<Slingshot>("assets/Ang_Birds/slingshot.png", 150.f, 750.f));
+    slingshots.push_back(std::make_unique<Slingshot>("../assets/Ang_Birds/slingshot.png", 150.f, 750.f, 0.8f));
 
 	// Enemies, Birds, and Structures Creation
 
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Small, 830, 660));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Medium, 650, 300));
-    enemies.push_back(std::make_unique<Enemy>(world, EnemySize::Big, 1000, 540));
+    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Small, 830, 660));
+    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Medium, 650, 300));
+    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Big, 1000, 540));
 
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Red, 100, 750));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Yellow, 100, 750));
-    birds.push_back(std::make_unique<Bird>(world, BirdType::Black, 300, 750));
+    birds.push_back(std::make_unique<Bird>(&world, BirdType::Red, 100, 750));
+    birds.push_back(std::make_unique<Bird>(&world, BirdType::Yellow, 100, 750));
+    birds.push_back(std::make_unique<Bird>(&world, BirdType::Black, 300, 750));
 
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 760, 750, -45));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 850, 750, 45));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 745, 750, 90));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 770, 695, 0));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 760, 750, -45));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 850, 750, 45));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 745, 750, 90));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 770, 695, 0));
 
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 802, 750, 90));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 807, 750, 90));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 805, 690, 90));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 802, 750, 90));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 807, 750, 90));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 805, 690, 90));
 
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 865, 750, 90));
-    structures.push_back(std::make_unique<Structure>(world, StructMaterial::Stone, 840, 695, 0));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 865, 750, 90));
+    structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 840, 695, 0));
 
 	// Set starting position of the first bird on the slingshot
 
@@ -102,6 +105,8 @@ int main()
     float maxDragDistY = 75.f;
 
     float launchStr = 0.6f;
+
+    bool loading = true;
 
     // Sets first bird in the vector to kinematic and places it at the set slingshot origin points.
 
@@ -157,7 +162,6 @@ int main()
 					// Set back to dynamic to be affected by physics and apply impulse based on drag distance
 
                     body->SetType(b2_dynamicBody);
-
                     body->ApplyLinearImpulseToCenter(b2Vec2(launchVec.x * launchStr, launchVec.y * launchStr), true);
 
 					// Reset dragging state and mark bird as in flight
@@ -234,19 +238,30 @@ int main()
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
 
-        for (auto& enemy : enemies)
-        {
-            enemy->Update();
-        }
+		if (loading) {
+			ui.Update();
 
-        for (auto& bird : birds)
-        {
-            bird->Update();
-        }
-		for (auto& structure : structures)
-		{
-			structure->Update();
+            if (ui.isFinished())
+            {
+                loading = false;
+            }
 		}
+        else
+        {
+            for (auto& enemy : enemies)
+            {
+                enemy->Update();
+            }
+
+            for (auto& bird : birds)
+            {
+                bird->Update();
+            }
+            for (auto& structure : structures)
+            {
+                structure->Update();
+            }
+        }
 
         for (const auto& hit : contactListener.hitEvents)
         {
@@ -262,15 +277,8 @@ int main()
             }
 
             // ---------- STRUCTURES ----------
-            if (Structure* structure =
-                dynamic_cast<Structure*>(hit.target))
-            {
-                structure->takeDamage(hit.damage);
-
-                std::cout << "Structure took "
-                    << hit.damage
-                    << " damage\n";
-            }
+            if (Structure* structure = dynamic_cast<Structure*>(hit.target))
+            { structure->takeDamage(hit.damage); }
         }
 
 
@@ -282,20 +290,11 @@ int main()
         {
             if ((*it)->isDead())
             {
-                std::cout << "Enemy Destroyed\n";
-
-                world.DestroyBody(
-                    (*it)->getBody()
-                );
-
+                world.DestroyBody((*it)->getBody());
                 (*it)->invalidateBody();
-
                 it = enemies.erase(it);
             }
-            else
-            {
-                ++it;
-            }
+            else { ++it; }
         }
 
 
@@ -307,20 +306,11 @@ int main()
         {
             if ((*it)->isDestroyed())
             {
-                std::cout << "Structure Destroyed\n";
-
-                world.DestroyBody(
-                    (*it)->getBody()
-                );
-
+                world.DestroyBody((*it)->getBody());
                 (*it)->invalidateBody();
-
                 it = structures.erase(it);
             }
-            else
-            {
-                ++it;
-            }
+            else { ++it; }
         }
 
 
@@ -337,34 +327,20 @@ int main()
         window.draw(sf_groundVisual);
         window.draw(sf_wallVisual);
 
-        for (auto& slingshot : slingshots)
+        if (loading) { ui.Render(window); }
+        else
         {
-            slingshot->Render(window);
+            for (auto& slingshot : slingshots) { slingshot->Render(window); }
+            for (auto& enemy : enemies) { enemy->Render(window); }
+            for (auto& bird : birds) { bird->Render(window); }
+            for (auto& structure : structures) { structure->Render(window); }
         }
-
-        for (auto& enemy : enemies)
-        {
-            enemy->Render(window);
-        }
-
-        for (auto& bird : birds)
-        {
-            bird->Render(window);
-        }
-
-		for (auto& structure : structures)
-		{
-			structure->Render(window);
-		}
 
         if (isDragging && !birds.empty())
         {
             b2Body* body = birds.front().get()->getBody();
 
-            sf::Vector2f birdPos(
-                body->GetPosition().x * SCALE,
-                body->GetPosition().y * SCALE
-            );
+            sf::Vector2f birdPos(body->GetPosition().x * SCALE, body->GetPosition().y * SCALE );
 
             sf::Vertex slingLine[] =
             {
@@ -376,10 +352,7 @@ int main()
         }
 
         window.display();
-
     }
-
-
 
     return 0;
 }

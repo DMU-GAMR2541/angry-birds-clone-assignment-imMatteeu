@@ -22,11 +22,11 @@ enum class ColliderShape
 	Rectangle
 };
 
-class DynamicObject : public GameObject {
+class DynamicObject : virtual public GameObject {
 
 public:
 
-	DynamicObject(b2World& world, const EntityData& data, float posX, float posY, float rotationDeg);
+	DynamicObject(b2World* world, const EntityData& data, float posX, float posY, float rotationDeg, bool physicsEnabled);
 
 	~DynamicObject();
 	
@@ -48,6 +48,7 @@ b2Body* b2_Body = nullptr;
 
 private:
 	int i_mass;
+	bool b_physics;
 
 	sf::Sprite objSprite;
 	sf::Texture objTexture;

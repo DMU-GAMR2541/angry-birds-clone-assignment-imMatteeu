@@ -2,11 +2,11 @@
 #include <string>
 #include "GameObject.h"
 
-class StaticObject : public GameObject {
+class StaticObject : virtual public GameObject {
 
 public:
 
-	StaticObject(const std::string& texturePath, float posX, float posY, float width, float height, float rotationDeg = 0.0f);
+	StaticObject(const std::string& texturePath, float posX, float posY, float width, float height, float rotationDeg = 0.0f, float worldScale = 1.f);
 
 	virtual ~StaticObject() = default;
 

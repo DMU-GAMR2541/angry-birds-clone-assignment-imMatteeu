@@ -3,7 +3,7 @@
 #include "StructureProfiles.h"
 
 static EntityData WoodStructure = {
-	"assets/Ang_Birds/woodenwall.png",
+	"../assets/Ang_Birds/woodenwall.png",
 	60.0f,
 	10.0f,
 	2.0f,
@@ -13,7 +13,7 @@ static EntityData WoodStructure = {
 };
 
 static EntityData StoneStructure = {
-	"assets/Ang_Birds/stonewall.png",
+	"../assets/Ang_Birds/stonewall.png",
 	60.0f,
 	10.0f,
 	12.0f,
@@ -23,7 +23,7 @@ static EntityData StoneStructure = {
 };
 
 static EntityData IceStructure = {
-	"assets/Ang_Birds/icewall.png",
+	"../assets/Ang_Birds/icewall.png",
 	60.0f,
 	10.0f,
 	1.0f,

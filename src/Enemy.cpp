@@ -1,13 +1,14 @@
 #include "Enemy.h"
 #include "EnemyProfiles.h"
 
-Enemy::Enemy(b2World& world, EnemySize size, float posX, float posY, float rotationDeg)
+Enemy::Enemy(b2World* world, EnemySize size, float posX, float posY, float rotationDeg, bool physicsEnabled)
     : DynamicObject(
         world,
 		getEnemyProfile(size),
         posX,
         posY,
-        rotationDeg
+        rotationDeg,
+        physicsEnabled
     ),
     e_size(size),
     i_health(getInitialHealth(size))

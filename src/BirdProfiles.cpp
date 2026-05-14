@@ -2,7 +2,7 @@
 #include "Bird.h"
 
 static EntityData RedBird = {
-	"assets/Ang_Birds/redbird.png",
+	"../assets/Ang_Birds/redbird.png",
 	50.0f,
 	50.0f,
 	1.0f,
@@ -12,7 +12,7 @@ static EntityData RedBird = {
 };
 
 static EntityData YellowBird = {
-	"assets/Ang_Birds/yellowbird.png",
+	"../assets/Ang_Birds/yellowbird.png",
 	50.0f,
 	50.0f,
 	1.0f,
@@ -22,7 +22,7 @@ static EntityData YellowBird = {
 };
 
 static EntityData BlackBird = {
-	"assets/Ang_Birds/blackbird.png",
+	"../assets/Ang_Birds/blackbird.png",
 	50.0f,
 	50.0f,
 	1.0f,

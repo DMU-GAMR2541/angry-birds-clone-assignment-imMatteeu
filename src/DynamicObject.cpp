@@ -6,13 +6,14 @@
 #include <cmath>
 
 DynamicObject::DynamicObject(
-    b2World& world,
+    b2World* world,
 	const EntityData& data,
     float posX,
     float posY,
-	float rotationDeg
+	float rotationDeg,
+	bool physicsEnabled
 )
-    : textureLoc(data.texturePath), i_mass(data.mass)
+    : textureLoc(data.texturePath), i_mass(data.mass), b_physics(physicsEnabled)
 {
     // Load texture
     if (!objTexture.loadFromFile(textureLoc))
@@ -27,14 +28,22 @@ DynamicObject::DynamicObject(
         data.height / objSprite.getLocalBounds().height
     );
 
+    objSprite.setOrigin(
+        objSprite.getLocalBounds().width / 2.0f,
+        objSprite.getLocalBounds().height / 2.0f
+    );
+
+	if (!physicsEnabled)
+		return;
+
     b2_BodyDef.type = b2_dynamicBody;
     b2_BodyDef.position.Set(posX / 30, posY / 30);
     b2_BodyDef.angle = rotationDeg * 3.1415927f / 180.0f;
 
-    b2_Body = world.CreateBody(&b2_BodyDef);
+    b2_Body = world->CreateBody(&b2_BodyDef);
 
     b2_Body->GetUserData().pointer =
-        reinterpret_cast<uintptr_t>(this);
+        reinterpret_cast<uintptr_t>(static_cast<GameObject*>(this));
 
 
     if (data.isCircle)
@@ -63,10 +72,6 @@ DynamicObject::DynamicObject(
 
     b2_Body->CreateFixture(&b2_FixtureDef);
 
-    objSprite.setOrigin(
-        objSprite.getLocalBounds().width / 2.0f,
-        objSprite.getLocalBounds().height / 2.0f
-    );
 }
 
 void DynamicObject::Render(sf::RenderWindow& window)
@@ -79,7 +84,7 @@ void DynamicObject::Update()
     const float SCALE = 30.0f;
     const float RAD_TO_DEG = 180.0f / 3.1415927f;
 
-    if (b2_Body == nullptr)
+    if (!b_physics || !b2_Body)
         return;
 
     // Get Box2D position
@@ -106,7 +111,7 @@ void DynamicObject::UpdateSprite()
 
 DynamicObject::~DynamicObject()
 {
-    if (b2_Body)
+    if (b_physics && b2_Body)
     {
         b2_Body->GetWorld()->DestroyBody(b2_Body);
         b2_Body = nullptr;
