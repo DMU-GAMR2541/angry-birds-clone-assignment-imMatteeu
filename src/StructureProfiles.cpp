@@ -8,7 +8,7 @@ static EntityData WoodStructure = {
 	"../assets/Ang_Birds/woodenwall.png",
 	60.0f,
 	10.0f,
-	2.0f,
+	5.0f,
 	0.5f,
 	0.3f,
 	false
@@ -30,7 +30,7 @@ static EntityData IceStructure = {
 	10.0f,
 	1.0f,
 	0.5f,
-	0.3f,
+	0.0f,
 	false
 };
 

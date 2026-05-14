@@ -25,11 +25,11 @@ int Structure::getInitialHealth(StructMaterial material) const
 {
 	switch (material)
 	{
-	case StructMaterial::Wood: return 100;
-	case StructMaterial::Stone: return 150;
+	case StructMaterial::Wood: return 150;
+	case StructMaterial::Stone: return 200;
 	case StructMaterial::Ice: return 50;
 	}
-	return 100;
+	return 150;
 }
 
 // Damage application function, reduces health by damage amount and clamps to zero to prevent negative health values

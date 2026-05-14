@@ -115,12 +115,14 @@ int main()
 	// Enemies, Birds, and Structures Creation
 
     enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Small, 830, 660));
-    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Medium, 650, 300));
-    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Big, 1000, 540));
+    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Medium, 1100, 640));
+    enemies.push_back(std::make_unique<Enemy>(&world, EnemySize::Big, 585, 510));
 
     birds.push_back(std::make_unique<Bird>(&world, BirdType::Red, 100, 750));
     birds.push_back(std::make_unique<Bird>(&world, BirdType::Yellow, 100, 750));
-    birds.push_back(std::make_unique<Bird>(&world, BirdType::Black, 300, 750));
+    birds.push_back(std::make_unique<Bird>(&world, BirdType::Black, 50, 750));
+
+    // Stone Structure Creation
 
     structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 760, 750, -45));
     structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 850, 750, 45));
@@ -133,6 +135,27 @@ int main()
 
     structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 865, 750, 90));
     structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Stone, 840, 695, 0));
+
+    // Wood Structure Creation
+
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Wood, 950, 750, 90));
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Wood, 1005, 750, 90));
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Wood, 1060, 750, 90));
+
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Wood, 975, 690, 0));
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Wood, 1035, 690, 0));
+
+
+	// Ice Structure Creation
+
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 525, 750, 90));
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 645, 750, 90));
+
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 525, 715, 0));
+	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 645, 715, 0));
+	
+
+
 
     // Sets first bird in the vector to kinematic and places it at the set slingshot origin points.
 
