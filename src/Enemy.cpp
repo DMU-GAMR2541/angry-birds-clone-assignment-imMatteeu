@@ -1,19 +1,11 @@
 #include "Enemy.h"
 #include "EnemyProfiles.h"
 
+// Enemy Constructor
+
 Enemy::Enemy(b2World* world, EnemySize size, float posX, float posY, float rotationDeg, bool physicsEnabled)
-    : DynamicObject(
-        world,
-		getEnemyProfile(size),
-        posX,
-        posY,
-        rotationDeg,
-        physicsEnabled
-    ),
-    e_size(size),
-    i_health(getInitialHealth(size))
-{
-}
+    : DynamicObject(world, getEnemyProfile(size), posX, posY, rotationDeg, physicsEnabled),
+    e_size(size), i_health(getInitialHealth(size)) {}
 
 void Enemy::Update()
 {
@@ -24,6 +16,8 @@ void Enemy::Render(sf::RenderWindow& window)
 {
     DynamicObject::Render(window);
 }
+
+// Initial health values based on enemy size, can be adjusted for game balance
 
 int Enemy::getInitialHealth(EnemySize size) const
 {
@@ -37,14 +31,12 @@ int Enemy::getInitialHealth(EnemySize size) const
     return 50;
 }
 
+// Damage application function, reduces health by damage amount and clamps to zero to prevent negative health values
+
 void Enemy::takeDamage(int damage)
 {
     i_health -= damage;
-
-    if (i_health < 0.0f)
-        i_health = 0.0f;
-
-    std::cout << "Enemy HP: " << i_health << "\n";
+    if (i_health < 0.0f) { i_health = 0.0f; }
 }
 
 bool Enemy::isDead() const

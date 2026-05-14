@@ -3,18 +3,11 @@
 #include "Structure.h"
 #include "StructureProfiles.h"
 
+// Structure Constructor
+
 Structure::Structure(b2World* world, StructMaterial material, float posX, float posY, float rotationDeg, bool physicsEnabled)
-	: DynamicObject(
-		world,
-		getStructureProfile(material),
-		posX,
-		posY,
-		rotationDeg,
-		physicsEnabled
-	),
-	s_material(material),
-	i_health(getInitialHealth(material))
-{}
+	: DynamicObject(world, getStructureProfile(material), posX,	posY, rotationDeg, physicsEnabled ),
+	s_material(material), i_health(getInitialHealth(material)) {}
 
 void Structure::Update()
 {
@@ -25,6 +18,8 @@ void Structure::Render(sf::RenderWindow& window)
 {
 	DynamicObject::Render(window);
 }
+
+// Initial health values based on material type, can be adjusted for game balance
 
 int Structure::getInitialHealth(StructMaterial material) const
 {
@@ -37,14 +32,12 @@ int Structure::getInitialHealth(StructMaterial material) const
 	return 100;
 }
 
+// Damage application function, reduces health by damage amount and clamps to zero to prevent negative health values
+
 void Structure::takeDamage(int damage)
 {
 	i_health -= damage;
-
-	if (i_health < 0.0f)
-		i_health = 0.0f;
-
-	std::cout << "Structure HP: " << i_health << "\n";
+	if (i_health < 0.0f) { i_health = 0.0f; }
 }
 
 bool Structure::isDestroyed() const

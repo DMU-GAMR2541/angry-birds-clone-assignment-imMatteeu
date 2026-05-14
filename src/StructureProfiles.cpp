@@ -2,6 +2,8 @@
 
 #include "StructureProfiles.h"
 
+// Data Profiles for each Structure Material
+
 static EntityData WoodStructure = {
 	"../assets/Ang_Birds/woodenwall.png",
 	60.0f,
@@ -31,6 +33,8 @@ static EntityData IceStructure = {
 	0.3f,
 	false
 };
+
+// Function to retrieve the EntityData profile for a given StructMaterial
 
 const EntityData& getStructureProfile(StructMaterial material)
 {

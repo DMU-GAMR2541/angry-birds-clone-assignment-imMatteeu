@@ -2,6 +2,8 @@
 
 #include <string>
 
+// Physics Data Storage
+
 struct EntityData {
 	std::string texturePath;
 

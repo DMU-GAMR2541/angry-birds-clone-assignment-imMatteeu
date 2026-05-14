@@ -3,10 +3,17 @@
 #include "Structure.h"
 #include "BirdProfiles.h"
 
+// Bird Constructor
+
 Bird::Bird(b2World* world, BirdType type, float posX, float posY, float rotationDeg, bool physicsEnabled)
 	: DynamicObject(world, getBirdProfile(type), posX, posY, rotationDeg, physicsEnabled), b_type(type), b_ability(getAbility(type))
 {}
 
+/* Update Function
+* - Handles DynamicObject Updates for sprite position and physics body synchronization
+* - Manages bird lifetime tracking for expiration logic
+* - Handles explosion timer and fixture cleanup for the Explode ability
+*/
 void Bird::Update()
 {
 	DynamicObject::Update();
@@ -33,6 +40,8 @@ void Bird::Render(sf::RenderWindow& window)
 {
 	DynamicObject::Render(window);
 }
+
+// Ability retrieval function based on bird type
 
 BirdAbility Bird::getAbility(BirdType type) const
 {
@@ -61,9 +70,10 @@ bool Bird::canUseAbility() const
 	return fired && !b_abilityUsed;
 }
 
+// Ability Activation Function
+
 void Bird::activateAbility()
 {
-
 	if (!canUseAbility()) { return; }
 
 	b_abilityUsed = true;
@@ -80,9 +90,9 @@ void Bird::activateAbility()
 
 		float radius = 5.0f;
 
-		for (b2Body* body = getBody()->GetWorld()->GetBodyList();
-			body;
-			body = body->GetNext())
+		// Iterate through all bodies in the world to find those within the explosion radius and apply forces and damage accordingly
+
+		for (b2Body* body = getBody()->GetWorld()->GetBodyList(); body; body = body->GetNext())
 		{
 			if (body == getBody())
 				continue;
@@ -96,28 +106,24 @@ void Bird::activateAbility()
 
 			dir.Normalize();
 
-			float force =
-				40.0f * (1.0f - (distance / radius));
+			float force = 40.0f * (1.0f - (distance / radius));
 
 			body->ApplyLinearImpulseToCenter(force * dir, true);
 
-			GameObject* obj =
-				reinterpret_cast<GameObject*>(
-					body->GetUserData().pointer);
+			/* Damage Application Logic
+			* - Iterates through bodies within explosion radius
+			* - Calculates damage based on distance from explosion center, with max damage at center and falloff to zero at edge of radius
+			* - Applies damage to Enemies and Structures by retrieving their GameObject pointers from body user data and calling their takeDamage functions with calculated damage values
+			*/
+
+			GameObject* obj = reinterpret_cast<GameObject*>(body->GetUserData().pointer);
 
 			if (!obj)
 				continue;
 
-			if (Enemy* enemy = dynamic_cast<Enemy*>(obj))
-			{
-				enemy->takeDamage(100.0f);
-			}
+			if (Enemy* enemy = dynamic_cast<Enemy*>(obj)) { enemy->takeDamage(100.0f); }
 
-			if (Structure* structure =
-				dynamic_cast<Structure*>(obj))
-			{
-				structure->takeDamage(100.0f);
-			}
+			if (Structure* structure = dynamic_cast<Structure*>(obj)) { structure->takeDamage(100.0f); }
 		}
 
 		break;

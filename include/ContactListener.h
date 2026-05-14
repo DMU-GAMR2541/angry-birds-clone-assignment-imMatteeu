@@ -25,7 +25,7 @@ public:
 
     std::vector<HitEvent> hitEvents;
 
-    // Called upo Contact between 2 unique fixtures.
+    // Called on Contact between 2 unique fixtures.
 
     void BeginContact(b2Contact* contact) override
     {
@@ -50,7 +50,7 @@ public:
         Bird* bird = nullptr;
         GameObject* target = nullptr;
 
-        // --- Case 1: A is bird, B is target ---
+        // Case 1: A is bird, B is target
         if ((bird = dynamic_cast<Bird*>(objA)))
         {
             target = objB;
@@ -64,7 +64,7 @@ public:
             return;
         }
 
-        // --- Case 2: B is bird, A is target ---
+        // Case 2: B is bird, A is target
         if ((bird = dynamic_cast<Bird*>(objB)))
         {
             target = objA;

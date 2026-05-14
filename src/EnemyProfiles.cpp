@@ -2,6 +2,8 @@
 
 #include "EnemyProfiles.h"
 
+// Data Profiles for each Enemy Type
+
 static EntityData SmallPig = {
 	"../assets/Ang_Birds/pig.png",
 	40.0f,
@@ -31,6 +33,8 @@ static EntityData BigPig = {
 	0.3f,
 	true
 };
+
+// Function to retrieve the EntityData profile for a given EnemySize
 
 const EntityData& getEnemyProfile(EnemySize size)
 {

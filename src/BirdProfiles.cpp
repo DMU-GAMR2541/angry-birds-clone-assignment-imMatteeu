@@ -1,6 +1,8 @@
 #include "BirdProfiles.h"
 #include "Bird.h"
 
+// Data Profiles for each Bird Type
+
 static EntityData RedBird = {
 	"../assets/Ang_Birds/redbird.png",
 	50.0f,
@@ -30,6 +32,8 @@ static EntityData BlackBird = {
 	0.3f,
 	true
 };
+
+// Function to retrieve the EntityData profile for a given BirdType
 
 const EntityData& getBirdProfile(BirdType type)
 {

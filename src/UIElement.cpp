@@ -2,9 +2,7 @@
 #include <SFML/Graphics.hpp >
 #include <iostream>
 
-//--------------------------------------------------
-// Constructor
-//--------------------------------------------------
+// UIElement Constructor
 
 UIElement::UIElement(
     const std::string& backdropPath,
@@ -35,7 +33,6 @@ void UIElement::Update()
     case UIState::Loading:
         UpdateLoading();
         break;
-
     case UIState::Finished:
         return;
     }
