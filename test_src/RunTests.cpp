@@ -5,20 +5,20 @@
 #include <filesystem>
 #include <list>
 
-/// <summary>
-///Taken from the GoogleTest primer. 
-/// </summary>
+int initHP = 50;
+int initTension = 0;
 
-// The fixture for testing class Foo.
 class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<enemyTest> enemy;
     std::unique_ptr<slingshotTest> slingshot;
+
+
 protected:
 
     void SetUp() override 
     {
-        enemy = std::make_unique<enemyTest>(50); // All enemnies in this test suite start with 50 HP.
+        enemy = std::make_unique<enemyTest>(initHP); // All enemnies in this test suite start with 50 HP.
 		slingshot = std::make_unique<slingshotTest>();
 
 		slingshot->loadBird("Red"); // All slingshots in this test suite start with a red bird loaded.
@@ -37,19 +37,19 @@ protected:
 
 TEST(Enemy, First_test) 
 {
-    enemyTest e(100);
+    enemyTest e(initHP);
 
-    EXPECT_EQ(e.getHealth(), 100);
+    EXPECT_EQ(e.getHealth(), initHP);
 }
 
 TEST(slingshot, iniTensionTest) 
 {
 	slingshotTest s;
 
-	EXPECT_EQ(s.getTension(), 0);
+	EXPECT_EQ(s.getTension(), initTension);
 }
 
-// Tests for Fatal and Non-Fatal Assetions
+// Tests for Fatal Faand Non-Fatal Assetions
 
 TEST(AssertionTests, FatalAssertion)
 {
@@ -57,7 +57,7 @@ TEST(AssertionTests, FatalAssertion)
 
 	slingshotTest s;
 
-	ASSERT_EQ(s.getTension(), 0); // Pass
+	ASSERT_EQ(s.getTension(), initTension); // Pass
 
 	s.pullBack(50);
 
@@ -65,7 +65,7 @@ TEST(AssertionTests, FatalAssertion)
 
 	ASSERT_EQ(s.getTension(), 100); // Fail, test will end due to fatal assertion
 
-	ASSERT_EQ(s.getTension(), 50); // Pass, will not run due to fatal assertion
+	ASSERT_EQ(s.getTension(), 50); // M/A, will not run due to fatal assertion
 }
 
 TEST(AssertionTests, NonFatalAssertions)
@@ -74,7 +74,7 @@ TEST(AssertionTests, NonFatalAssertions)
 
 	slingshotTest s;
 
-	EXPECT_EQ(s.getTension(), 0); // Pass
+	EXPECT_EQ(s.getTension(), initTension); // Pass
 
 	s.pullBack(50);
 
@@ -85,33 +85,69 @@ TEST(AssertionTests, NonFatalAssertions)
 	EXPECT_EQ(s.getTension(), 50); // Pass, test continues after non-fatal assertion failure
 }
 
+// Fixture Tests
 
-//TEST_F(EnemyTest, LethalDamagePopsPig)
-//{
-//    enemy->takeDamage(60);
-//
-//    EXPECT_TRUE(enemy->checkIfPopped());
-//}
-//
-//TEST(SlingshotTest, tension_Test) {
-//    slingshotTest s;
-//    EXPECT_EQ(s.getTension(), 0);
-//}
-//
-//
-//
-//class ParamTest : public ::testing::TestWithParam<int> {
-//protected:
-//    ParamTest() = default;
-//    ~ParamTest() = default;
-//
-//    void SetUp() override {}
-//    void TearDown() override {}
-//};
-//
-//TEST_P(ParamTest, SimpleTest) {
-//    int i_test;
-//}
+// > Enemy Tests
+
+TEST_F(EnemyTest, enemyCorrectlyInitialised)
+{
+	EXPECT_FALSE(enemy->checkIfPopped());
+	EXPECT_EQ(enemy->getHealth(), initHP);
+}
+
+TEST_F(EnemyTest, takeDamageReducesHealth)
+{
+	enemy->takeDamage(20);
+	EXPECT_EQ(enemy->getHealth(), 30);
+}
+
+TEST_F(EnemyTest, takeDamagePopsEnemy)
+{
+	enemy->takeDamage(50);
+	EXPECT_TRUE(enemy->checkIfPopped());
+	EXPECT_EQ(enemy->getHealth(), 0);
+}
+
+// > Slingshot Test
+
+TEST_F(EnemyTest, slingshotCorrectlyInitialised)
+{
+	EXPECT_EQ(slingshot->getBirdType(), "Red");
+	EXPECT_EQ(slingshot->getTension(), 0);
+}
+
+// Binary Comparison Tests
+
+TEST(BinaryComparisonTests, operatorComparisons)
+{
+	enemyTest e1(initHP); // Sets up Enemy 1 with 50hp
+	enemyTest e2(initHP); // Sets up Enemy 2 with 50hp
+
+	EXPECT_EQ(e1.getHealth(), e2.getHealth()); // Pass, both have 50 HP
+
+	EXPECT_NE(e1.getHealth(), 0); // Pass, both have 50 HP, not 0
+
+	e1.takeDamage(20); // Enemy 1 takes 20 damage
+
+	EXPECT_LT(e1.getHealth(), e2.getHealth()); // Pass, e1 has 30 HP, e2 has 50 HP
+	EXPECT_GT(e2.getHealth(), e1.getHealth()); // Pass, e2 has 50 HP, e1 has 30 HP
+}
+
+// Param Tests
+
+class ParamTest : public ::testing::TestWithParam<int> {};
+
+TEST_P(ParamTest, damageValuesTest) {
+	enemyTest e(initHP);
+
+	int damage = GetParam(); // Grabs damage to deal from the test parameters
+
+	e.takeDamage(damage); // Apply damage
+
+	EXPECT_LE(e.getHealth(), initHP); // Compare current HP to initial HP
+}
+
+INSTANTIATE_TEST_CASE_P(DamageTests, ParamTest, ::testing::Values(10, 20, 30, 40, 50));
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
