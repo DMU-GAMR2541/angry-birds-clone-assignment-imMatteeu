@@ -5,10 +5,10 @@
 #include "box2d/box2d.h"
 #include <iostream>
 
-class GameObject {
-
+class GameObject 
+{
+public:
 	virtual void Update() = 0;
 	virtual void Render(sf::RenderWindow& window) = 0;
-
 };
 

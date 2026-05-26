@@ -42,6 +42,8 @@ public:
 		b2_Body = nullptr;
 	}
 
+	sf::Vector2f getPosition() const;
+
 protected:
 
 b2Body* b2_Body = nullptr;

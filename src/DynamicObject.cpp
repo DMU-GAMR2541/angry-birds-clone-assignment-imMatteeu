@@ -14,6 +14,10 @@ DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX,
     if (!objTexture.loadFromFile(textureLoc))
     {
         std::cout << "Failed to load texture: " << textureLoc << std::endl;
+    }    
+    if (objTexture.loadFromFile(textureLoc))
+    {
+        std::cout << "Texture: " << textureLoc << " loaded successfully!" << std::endl;
     }
 
     objSprite.setTexture(objTexture);
@@ -106,5 +110,19 @@ DynamicObject::~DynamicObject()
 void clearBody()
 {
     b2Body* b2_Body = nullptr;
+}
+
+sf::Vector2f DynamicObject::getPosition() const
+{
+	if (b2_Body)
+	{
+		b2Vec2 position = b2_Body->GetPosition();
+		return sf::Vector2f(position.x * 30.0f, position.y * 30.0f);
+	}
+	else
+	{
+		std::cout << "Warning: Attempted to get position of an object with an invalid body." << std::endl;
+		return sf::Vector2f(0.f, 0.f); // Return a default position if body is invalid
+	}
 }
 

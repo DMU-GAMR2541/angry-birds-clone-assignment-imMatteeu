@@ -34,6 +34,9 @@
     <ClCompile Include="..\src\UIElement.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\testSuite.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\EntityProfiles.h">
@@ -73,6 +76,9 @@
       <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="..\include\UIElement.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\testSuite.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>

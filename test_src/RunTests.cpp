@@ -65,7 +65,7 @@ TEST(AssertionTests, FatalAssertion)
 
 	ASSERT_EQ(s.getTension(), 100); // Fail, test will end due to fatal assertion
 
-	ASSERT_EQ(s.getTension(), 50); // M/A, will not run due to fatal assertion
+	ASSERT_EQ(s.getTension(), 50); // N/A, will not run due to fatal assertion
 }
 
 TEST(AssertionTests, NonFatalAssertions)

@@ -420,6 +420,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\src\StaticObject.cpp" />
     <ClCompile Include="..\src\Structure.cpp" />
     <ClCompile Include="..\src\StructureProfiles.cpp" />
+    <ClCompile Include="..\src\testSuite.cpp" />
     <ClCompile Include="..\src\UIElement.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Enemy.cpp" />
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp" />
@@ -429,6 +430,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\include\EntityProfiles.h" />
     <ClInclude Include="..\include\Structure.h" />
     <ClInclude Include="..\include\StructureProfiles.h" />
+    <ClInclude Include="..\include\testSuite.h" />
     <ClInclude Include="..\include\UIElement.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\DynamicObject.h" />
