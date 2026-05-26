@@ -10,15 +10,17 @@
 DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX, float posY, float rotationDeg, bool physicsEnabled)
     : textureLoc(data.texturePath), i_mass(data.mass), b_physics(physicsEnabled)
 {
+
+	textureLoaded = objTexture.loadFromFile(textureLoc);
     // Load texture
-    if (!objTexture.loadFromFile(textureLoc))
+    if (!textureLoaded)
     {
         std::cout << "Failed to load texture: " << textureLoc << std::endl;
     }    
-    if (objTexture.loadFromFile(textureLoc))
+  /*  if (objTexture.loadFromFile(textureLoc))
     {
         std::cout << "Texture: " << textureLoc << " loaded successfully!" << std::endl;
-    }
+    }*/
 
     objSprite.setTexture(objTexture);
 

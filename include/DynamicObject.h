@@ -44,6 +44,9 @@ public:
 
 	sf::Vector2f getPosition() const;
 
+	bool textureLoaded = false;
+
+	bool isTextureLoaded() const { return textureLoaded; }
 protected:
 
 b2Body* b2_Body = nullptr;

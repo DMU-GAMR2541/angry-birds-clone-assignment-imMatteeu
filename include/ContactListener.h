@@ -58,7 +58,6 @@ public:
             if (target)
             {
                 hitEvents.push_back({ target, 50.0f });
-                std::cout << "Bird hit object\n";
             }
 
             return;
@@ -72,7 +71,6 @@ public:
             if (target)
             {
                 hitEvents.push_back({ target, 50.0f });
-                std::cout << "Bird hit object\n";
             }
 
             return;
@@ -83,6 +81,5 @@ public:
 
 
 	// Clear hit events after processing to avoid multiple damage ticks from one contact.
-    void clear()
-    { hitEvents.clear(); }
+    void clear() { hitEvents.clear(); }
 };

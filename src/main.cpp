@@ -153,9 +153,6 @@ int main()
 
 	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 525, 715, 0));
 	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 645, 715, 0));
-	
-
-
 
     // Sets first bird in the vector to kinematic and places it at the set slingshot origin points.
 
