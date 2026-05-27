@@ -81,6 +81,12 @@
     <ClInclude Include="..\include\enemyTest.h">
       <Filter>Header Files\UnitTestHeaders</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\TestDestructorLog.h">
+      <Filter>Header Files\UnitTestHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TestConfig.h">
+      <Filter>Header Files\UnitTestHeaders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\CMakeLists.txt" />

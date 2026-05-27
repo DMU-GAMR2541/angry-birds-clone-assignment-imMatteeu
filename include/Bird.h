@@ -12,7 +12,7 @@ class Bird : public DynamicObject {
 public:
 	Bird(b2World* world, BirdType type, float posX, float posY, float rotationDeg = 0.0f, bool physicsEnabled = true);
 
-	virtual ~Bird() = default;
+	virtual ~Bird();
 
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;

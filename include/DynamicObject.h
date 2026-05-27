@@ -28,7 +28,7 @@ public:
 
 	DynamicObject(b2World* world, const EntityData& data, float posX, float posY, float rotationDeg, bool physicsEnabled);
 
-	~DynamicObject();
+	virtual ~DynamicObject();
 	
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;

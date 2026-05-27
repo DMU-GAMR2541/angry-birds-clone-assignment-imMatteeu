@@ -167,3 +167,12 @@ bool Bird::isDragging() const
 }
 
 void takeDamage(int damage) {}
+
+Bird::~Bird()
+{
+
+
+#ifdef UNIT_TESTING
+	TestDestructorLog::log("Bird");
+#endif
+}

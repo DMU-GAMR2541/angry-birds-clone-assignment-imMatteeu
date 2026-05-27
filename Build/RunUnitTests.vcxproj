@@ -422,6 +422,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="..\include\enemyTest.h" />
     <ClInclude Include="..\include\slingshotTest.h" />
+    <ClInclude Include="..\include\TestConfig.h" />
+    <ClInclude Include="..\include\TestDestructorLog.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Bird.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\BirdProfiles.h" />
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\ContactListener.h" />

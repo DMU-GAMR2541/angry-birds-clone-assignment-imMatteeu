@@ -1,3 +1,5 @@
+#define UNIT_TESTING
+
 #include <gtest/gtest.h>
 #include <box2d/box2d.h>
 #include <SFML/Graphics.hpp>
@@ -8,6 +10,7 @@
 
 #include "enemyTest.h"
 #include "slingshotTest.h"
+#include "TestDestructorLog.h"
 
 #include "Enemy.h"
 #include "Bird.h"
@@ -17,6 +20,19 @@
 int initHP = 50;
 int initTension = 0;
 
+class DestructorTests : public testing::Test
+{
+public:
+	b2Vec2 b2_gravity;
+	b2World world;
+	DestructorTests()
+		: b2_gravity(0.0f, 9.8f), world(b2_gravity) {
+	}
+	void SetUp() override
+	{
+		TestDestructorLog::clear();
+	}
+};
 
 class UnitTests : public testing::Test {
 public:
@@ -117,6 +133,27 @@ TEST_F(BirdTests, TextureLoadedTest)
 	EXPECT_TRUE(bird->isTextureLoaded());
 }
 
+TEST(DestructorTests, OrderCheck)
+{
+	TestDestructorLog::clear();
+
+	{
+		b2Vec2 gravity(0.0f, 9.8f);
+		b2World world(gravity);
+
+		auto bird = std::make_unique<Bird>(&world, BirdType::Red, 0, 0);
+	}
+
+
+	const auto& log = TestDestructorLog::get();
+
+	ASSERT_GE(log.size(), 3);
+
+    ASSERT_EQ(log.at(0), "Bird");
+    ASSERT_EQ(log.at(1), "DynamicObject");
+    ASSERT_EQ(log.at(2), "GameObject");
+}
+
 INSTANTIATE_TEST_SUITE_P(BirdMovementTest, BirdTests, ::testing::Values(5.f, 10.f, 15.f, 20.f, 50.f));
 
 TEST_P(EnemyTests, RelativeLocationTest)
@@ -139,7 +176,7 @@ TEST_P(EnemyTests, RelativeLocationTest)
 
 		float distance = b2Distance(birdPos, enemyPos);
 
-		//std::cout << "Bird: " << birdPos.x << ", " << birdPos.y << " vs Enemy: " << enemyPos.x << ", " << enemyPos.y << " Distance: " << distance << std::endl;
+		std::cout << "Bird: " << birdPos.x << ", " << birdPos.y << " vs Enemy: " << enemyPos.x << ", " << enemyPos.y << " Distance: " << distance << std::endl;
 
 		totalDistance += distance;
 		averageDistance = totalDistance / enemies.size();
@@ -150,7 +187,7 @@ TEST_P(EnemyTests, RelativeLocationTest)
 		EXPECT_LT(distance, 1200.f);
 	}
 
-	//std::cout << std::endl << "Average Distance: " << averageDistance << std::endl;
+	std::cout << std::endl << "Average Distance: " << averageDistance << std::endl;
 
 	EXPECT_GT(totalDistance, 100.0f);
 }
@@ -160,13 +197,10 @@ TEST_F(EnemyTests, TextureLoadedTest)
 	for (const auto& enemy : enemies)
 	{
 		EXPECT_TRUE(enemy->isTextureLoaded());
-		std::cout << "Enemy Texture Loaded: " << enemy->isTextureLoaded() << std::endl;
 	}
 }
 
 INSTANTIATE_TEST_CASE_P(RelativeLocationTest, EnemyTests, ::testing::Values(b2Vec2(100,200), b2Vec2(400, 600), b2Vec2(900, 700), b2Vec2(1100,400)));
-
-
 
 // Basic Tests for Enemy and Slingshot class members, checks for correct value initializations.
 
@@ -250,13 +284,6 @@ TEST_F(UnitTests, slingshotCorrectlyInitialised)
 	EXPECT_EQ(slingshot->getBirdType(), "Red");
 	EXPECT_EQ(slingshot->getTension(), 0);
 }
-
-
-
-
-
-
-
 
 // Binary Comparison Tests
 

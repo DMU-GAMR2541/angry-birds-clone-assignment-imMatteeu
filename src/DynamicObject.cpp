@@ -5,6 +5,9 @@
 #include "DynamicObject.h"
 #include <cmath>
 
+#include "TestConfig.h"
+#include "TestDestructorLog.h"
+
 // DynamicObject Constructor
 
 DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX, float posY, float rotationDeg, bool physicsEnabled)
@@ -17,10 +20,6 @@ DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX,
     {
         std::cout << "Failed to load texture: " << textureLoc << std::endl;
     }    
-  /*  if (objTexture.loadFromFile(textureLoc))
-    {
-        std::cout << "Texture: " << textureLoc << " loaded successfully!" << std::endl;
-    }*/
 
     objSprite.setTexture(objTexture);
 
@@ -100,6 +99,11 @@ void DynamicObject::UpdateSprite()
 
 DynamicObject::~DynamicObject()
 {
+
+    #ifdef UNIT_TESTING
+        TestDestructorLog::log("DynamicObject");
+    #endif
+
 	// Destroy Box2D body if it exists and physics is enabled to prevent memory leaks and dangling pointers
 
     if (b_physics && b2_Body)
