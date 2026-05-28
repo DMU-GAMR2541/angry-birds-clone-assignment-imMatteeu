@@ -55,6 +55,7 @@ int main()
 
     UIElement ui("../assets/Ang_Birds/loading.jpg", font);
 
+
 	// Set up contact listener for handling collisions and damage application
 
     ContactListener contactListener;
@@ -86,7 +87,7 @@ int main()
 	// Wall Creation (boundary to prevent birds from flying off-screen)
 
     b2BodyDef b2_wallDef;
-    b2_wallDef.position.Set(1200.0f / SCALE, 400.0f / SCALE);
+    b2_wallDef.position.Set(1220.0f / SCALE, 400.0f / SCALE);
     b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
 
 	// Create a box shape for the wall and attach it to the body
@@ -107,10 +108,16 @@ int main()
     std::vector<std::unique_ptr<Bird>> birds;
     std::vector<std::unique_ptr<Structure>> structures;
     std::vector<std::unique_ptr<Slingshot>> slingshots;
+	std::vector<std::unique_ptr<StaticObject>> Statics;
 
-	// Static Slingshot Creation
+	// StaticObject Creation
+
+    Statics.push_back(std::make_unique<StaticObject>("../assets/Ang_Birds/sun.png", 1075, -50, 50, 50, 0, 0.5f));
+    Statics.push_back(std::make_unique<StaticObject>("../assets/Ang_Birds/clouds.png", 200, 200, 50, 50, 0, 0.03f));
+    Statics.push_back(std::make_unique<StaticObject>("../assets/Ang_Birds/clouds.png", 600, 200, 50, 50, 0, 0.04f));
 
     slingshots.push_back(std::make_unique<Slingshot>("../assets/Ang_Birds/slingshot.png", 150.f, 750.f, 0.8f));
+
 
 	// Enemies, Birds, and Structures Creation
 
@@ -314,6 +321,7 @@ int main()
             for (auto& enemy : enemies) { enemy->Update(); }
             for (auto& bird : birds) { bird->Update(); }
             for (auto& structure : structures) { structure->Update(); }
+			for (auto& Static : Statics) { Static->Update(); }
         }
 
        
@@ -371,6 +379,7 @@ int main()
             for (auto& enemy : enemies) { enemy->Render(window); }
             for (auto& bird : birds) { bird->Render(window); }
             for (auto& structure : structures) { structure->Render(window); }
+			for (auto& Static : Statics) { Static->Render(window); }
         }
 
 		// Draw the slingshot line while dragging a bird, connecting the slingshot origin to the bird's current position
