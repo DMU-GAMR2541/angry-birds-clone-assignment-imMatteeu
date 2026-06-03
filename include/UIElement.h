@@ -15,21 +15,18 @@ enum class UIState
 class UIElement : public StaticObject, public DynamicObject
 {
 public:
-	UIElement(const std::string& backdropPath,
-		const sf::Font& font);
+	UIElement(const std::string& backdropPath);
+
+	virtual ~UIElement() = default;
 
 	void Update() override;
-
 	void Render(sf::RenderWindow& window) override;
-	void onFinished();
-	bool isFinished();
 
-private:
+	void SetVisible(bool visible);
+	void SetState(UIState state);
 
-	void UpdateLoading();
+protected:
 
+	bool visible = true;
 	UIState state = UIState::Loading;
-	float progress = 0.f;
-
-	sf::Text text;
 };

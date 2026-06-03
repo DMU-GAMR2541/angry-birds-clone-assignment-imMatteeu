@@ -11,24 +11,31 @@
 // DynamicObject Constructor
 
 DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX, float posY, float rotationDeg, bool physicsEnabled)
-    : textureLoc(data.texturePath), i_mass(data.mass), b_physics(physicsEnabled)
+    : i_mass(data.mass), b_physics(physicsEnabled)
 {
+    bool hasTexture = !data.texturePath.empty();
 
-	textureLoaded = objTexture.loadFromFile(textureLoc);
-    // Load texture
-    if (!textureLoaded)
+    if (hasTexture)
     {
-        std::cout << "Failed to load texture: " << textureLoc << std::endl;
-    }    
+        textureLoc = data.texturePath;
 
-    objSprite.setTexture(objTexture);
+        if (!objTexture.loadFromFile(textureLoc) || textureLoc == "")
+        {
+            std::cout << "Dynamic Failed to load texture: " << textureLoc << std::endl;
+        }
+    }
 
-    objSprite.setScale(data.width / objSprite.getLocalBounds().width, data.height / objSprite.getLocalBounds().height);
+    if (hasTexture) 
+    {
+        objSprite.setTexture(objTexture);
 
-    objSprite.setOrigin(objSprite.getLocalBounds().width / 2.0f, objSprite.getLocalBounds().height / 2.0f);
+        objSprite.setScale(data.width / objSprite.getLocalBounds().width, data.height / objSprite.getLocalBounds().height);
 
-	if (!physicsEnabled)
-		return;
+        objSprite.setOrigin(objSprite.getLocalBounds().width / 2.0f, objSprite.getLocalBounds().height / 2.0f);
+    }
+
+    if (!physicsEnabled || world == nullptr)
+        return;
 
     b2_BodyDef.type = b2_dynamicBody;
     b2_BodyDef.position.Set(posX / 30, posY / 30);
@@ -37,7 +44,6 @@ DynamicObject::DynamicObject(b2World* world, const EntityData& data, float posX,
     b2_Body = world->CreateBody(&b2_BodyDef);
 
     b2_Body->GetUserData().pointer = reinterpret_cast<uintptr_t>(static_cast<GameObject*>(this));
-
 
     if (data.isCircle)
     {

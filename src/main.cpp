@@ -10,7 +10,11 @@
 #include "Structure.h"
 #include "ContactListener.h"
 #include "Slingshot.h"
+
 #include "UIElement.h"
+#include "LoadingManager.h"
+#include "UIText.h"
+#include "UIImage.h"
 
 int main() 
 {
@@ -41,7 +45,7 @@ int main()
 
 	// Loading screen flag 
 
-    bool loading = true;
+    LoadingManager loader;
 
 	// Initialize Box2D world with gravity
 
@@ -53,8 +57,16 @@ int main()
     sf::Font font;
     font.loadFromFile("../assets/fonts/angry-birds.ttf");
 
-    UIElement ui("../assets/Ang_Birds/loading.jpg", font);
+    UIText loadingText(font, "Loading: 0%");
+    UIImage loadingBackground("../assets/Ang_Birds/loading.jpg", sf::Vector2f(0.f, 0.f), sf::Vector2f(1200.f, 800.f));
 
+    std::vector<std::unique_ptr<UIImage>> UIImages;
+
+    UIImages.push_back(std::make_unique<UIImage>("../assets/Ang_Birds/loading.jpg", sf::Vector2f(0.f, 0.f), sf::Vector2f(1200.f, 800.f)));
+    UIImages.push_back(std::make_unique<UIImage>("../assets/Ang_Birds/Title.png", sf::Vector2f(330.f, 25.f), sf::Vector2f(520.f, 120.f)));
+
+
+    loader.startLoading();
 
 	// Set up contact listener for handling collisions and damage application
 
@@ -108,7 +120,7 @@ int main()
     std::vector<std::unique_ptr<Bird>> birds;
     std::vector<std::unique_ptr<Structure>> structures;
     std::vector<std::unique_ptr<Slingshot>> slingshots;
-	std::vector<std::unique_ptr<StaticObject>> Statics;
+    std::vector<std::unique_ptr<StaticObject>> Statics;
 
 	// StaticObject Creation
 
@@ -160,6 +172,7 @@ int main()
 
 	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 525, 715, 0));
 	structures.push_back(std::make_unique<Structure>(&world, StructMaterial::Ice, 645, 715, 0));
+
 
     // Sets first bird in the vector to kinematic and places it at the set slingshot origin points.
 
@@ -311,11 +324,14 @@ int main()
 
 		// Update Game Objects (enemies, birds, structures) and handle loading screen update
 
-		if (loading) 
+        if (!loader.isFinished())
         {
-			ui.Update();
-            if (ui.isFinished()) { loading = false; }
-		}
+            float progress = loader.getProgress();
+
+            loadingText.setText("Loading: " + std::to_string((int)progress) + "%");
+
+            loadingText.Update();
+        }
         else
         {
             for (auto& enemy : enemies) { enemy->Update(); }
@@ -372,14 +388,18 @@ int main()
 
 		// Render Game Objects and UI, if loading screen is active, render it instead of game objects
 
-        if (loading) { ui.Render(window); }
+        if (!loader.isFinished()) 
+        { 
+            for (auto& UIImage : UIImages) { UIImage->Render(window); }
+            loadingText.Render(window);
+        }
         else
         {
             for (auto& slingshot : slingshots) { slingshot->Render(window); }
             for (auto& enemy : enemies) { enemy->Render(window); }
             for (auto& bird : birds) { bird->Render(window); }
             for (auto& structure : structures) { structure->Render(window); }
-			for (auto& Static : Statics) { Static->Render(window); }
+            for (auto& Static : Statics) { Static->Update(); }
         }
 
 		// Draw the slingshot line while dragging a bird, connecting the slingshot origin to the bird's current position

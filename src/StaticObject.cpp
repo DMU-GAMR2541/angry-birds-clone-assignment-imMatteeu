@@ -6,9 +6,9 @@
 StaticObject::StaticObject(const std::string& texturePath, float posX, float posY, float width, float height, float rotationDeg, float worldScale)
     : textureLoc(texturePath)
 {
-    if (!objTexture.loadFromFile(texturePath))
+    if (!objTexture.loadFromFile(texturePath) && texturePath != "")
     {
-        std::cerr << "Failed to load texture: " << texturePath << std::endl;
+        std::cerr << "Static Failed to load texture: " << texturePath << std::endl;
         return;
     }
 

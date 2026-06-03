@@ -5,72 +5,36 @@
 // UIElement Constructor
 
 UIElement::UIElement(
-    const std::string& backdropPath,
-    const sf::Font& font
+    const std::string& backdropPath
 )
     : StaticObject(backdropPath, 0.f, 0.f, 1920.f, 1080.f),
     DynamicObject(nullptr, EntityData{}, 0.f, 0.f, 0.f, false)
 {
-    // ONLY UI-specific setup
-
-    text.setFont(font);
-    text.setCharacterSize(48);
-    text.setFillColor(sf::Color::White);
-    text.setString("Loading: 0%");
-
-    sf::FloatRect bounds = text.getLocalBounds();
-    text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
-    text.setPosition(600.f, 700.f);
-
+    visible = true;
     state = UIState::Loading;
-    progress = 0.f;
 }
 
 void UIElement::Update()
 {
-    switch (state)
-    {
-    case UIState::Loading:
-        UpdateLoading();
-        break;
-    case UIState::Finished:
-        return;
-    }
+    if (!visible || state == UIState::Finished) return;
+
 
     StaticObject::Update();
 }
 
-void UIElement::UpdateLoading()
-{
-    progress += 0.5f; // speed of loading
-
-    if (progress > 100.f)
-        progress = 100.f;
-
-    text.setString("Loading: " + std::to_string((int)progress) + "%");
-
-    sf::FloatRect bounds = text.getLocalBounds();
-    text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
-
-    if (progress >= 100.f)
-    {
-        state = UIState::Finished;
-        onFinished();
-    }
-}
-
 void UIElement::Render(sf::RenderWindow& window)
 {
-    if (state == UIState::Loading)
-    {
-        StaticObject::Render(window); 
-        window.draw(text);            
-    }
+    if (!visible || state == UIState::Finished) return;
+    
+    StaticObject::Render(window);             
 }
-void UIElement::onFinished()
-{}
 
-bool UIElement::isFinished()
+void UIElement::SetVisible(bool vis) 
 {
-    return state == UIState::Finished;
+    visible = vis;
+}
+
+void UIElement::SetState(UIState newState)
+{
+    state = newState;
 }
