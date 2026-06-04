@@ -16,6 +16,9 @@
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\EnemyProfiles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\LoadingManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\Slingshot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,7 +34,16 @@
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\UIElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\UIImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\UIText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EnemyPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,6 +72,9 @@
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\LoadingManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,8 +87,29 @@
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\StructureProfiles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\TestConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\TestDestructorLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\UIElement.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\UIImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\UIText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\enemyTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Indus\Documents\GitHub\angry-birds-clone-assignment-imMatteeu\include\slingshotTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\EnemyPool.h">
+      <Filter>Header Files\Current Work</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +121,9 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{72A13A20-599C-370F-B8F8-C0FC925AFDD8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Current Work">
+      <UniqueIdentifier>{cb91e2e3-3207-422c-af82-72fc8af79383}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

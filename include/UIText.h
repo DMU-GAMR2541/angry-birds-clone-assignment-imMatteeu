@@ -7,7 +7,7 @@
 class UIText : public UIElement
 {
 public:
-	UIText(const sf::Font& font, const std::string& initText = "", unsigned int charSize = 48);
+	UIText(const sf::Font& font, const std::string& initText = "", unsigned int charSize = 48, float posX = 0, float posY = 0);
 
 	void Update() override;
 	void Render(sf::RenderWindow& window) override;
@@ -19,6 +19,9 @@ public:
 private:
 
 	sf::Text text;
+
+	float posX;
+	float posY;
 
 	void ReCenter();
 };

@@ -1,11 +1,9 @@
 #include "UIText.h"
 
-//------------------------------------------------------------
-// Constructor
-//------------------------------------------------------------
 UIText::UIText(const sf::Font& font,
     const std::string& initialText,
-    unsigned int characterSize)
+    unsigned int characterSize,
+    float x, float y)
     : UIElement("")
 {
     text.setFont(font);
@@ -14,6 +12,9 @@ UIText::UIText(const sf::Font& font,
     text.setString(initialText);
 
     ReCenter();
+
+    posX = x;
+    posY = y;
 }
 
 void UIText::Update()
@@ -50,5 +51,5 @@ void UIText::ReCenter()
 {
     sf::FloatRect bounds = text.getLocalBounds();
     text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
-    text.setPosition(600.f, 750.f);
+    text.setPosition(posX, posY);
 }

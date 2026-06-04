@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+#include <unordered_map>
 
 #include "Enemy.h"
 #include "Bird.h"
@@ -32,6 +33,11 @@ int main()
     bool birdInFlight = false;
     bool isDragging = false;
 
+    std::unordered_map<std::string, int> gameStats;
+
+    gameStats["enemies_killed"] = 0;
+    gameStats["birds_fired"] = 0;
+
 	// Slingshot origin point for dragging and launching birds
 
     sf::Vector2 slingshotOrigin(200.f, 600.f);
@@ -57,7 +63,9 @@ int main()
     sf::Font font;
     font.loadFromFile("../assets/fonts/angry-birds.ttf");
 
-    UIText loadingText(font, "Loading: 0%");
+    UIText loadingText(font, "Loading: 0%", 48,  600.f, 750.f);
+    UIText statsText(font, "test", 48,  900.f, 50.f);
+
     UIImage loadingBackground("../assets/Ang_Birds/loading.jpg", sf::Vector2f(0.f, 0.f), sf::Vector2f(1200.f, 800.f));
 
     std::vector<std::unique_ptr<UIImage>> UIImages;
@@ -184,7 +192,9 @@ int main()
         body->SetType(b2_kinematicBody);
     }
 
-	// Main Game Loop
+    /*
+    *<>----------------Game Loop-----------------<>
+    */
 
     while (window.isOpen()) 
     {
@@ -235,6 +245,7 @@ int main()
 
 					// Reset dragging state and mark bird as in flight
 
+                    gameStats["birds_fired"]++;
                     bird->setDragging(false);
                     isDragging = false;
 
@@ -338,6 +349,10 @@ int main()
             for (auto& bird : birds) { bird->Update(); }
             for (auto& structure : structures) { structure->Update(); }
 			for (auto& Static : Statics) { Static->Update(); }
+
+            statsText.setText( "Kills: " + std::to_string(gameStats["enemies_killed"]) + " | Birds: " + std::to_string(gameStats["birds_fired"]));
+
+            statsText.Update();
         }
 
        
@@ -358,6 +373,8 @@ int main()
                 world.DestroyBody((*it)->getBody());
                 (*it)->invalidateBody();
                 it = enemies.erase(it);
+
+                gameStats["enemies_killed"]++;
             }
             else { ++it; }
         }
@@ -399,7 +416,9 @@ int main()
             for (auto& enemy : enemies) { enemy->Render(window); }
             for (auto& bird : birds) { bird->Render(window); }
             for (auto& structure : structures) { structure->Render(window); }
-            for (auto& Static : Statics) { Static->Update(); }
+            for (auto& Static : Statics) { Static->Render(window); }
+
+			statsText.Render(window);
         }
 
 		// Draw the slingshot line while dragging a bird, connecting the slingshot origin to the bird's current position
